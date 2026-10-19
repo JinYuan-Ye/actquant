@@ -1,5 +1,7 @@
 # π₀.₅ checkpoint 与校准脚本兼容性核查
 
+本页保留兼容性修复与四帧教学阶段的历史证据。60轨迹、11,777帧全量版本的产物、误差指标和下载入口统一见 [FULL_QUANTIZATION_RESULTS.md](../reproduction/pi05_lerobot/FULL_QUANTIZATION_RESULTS.md)，其完成判据为全量pipeline状态PASS；不要把下文历史教学规模当作全量规模。
+
 核查日期：2026-10-19。本文保留历史核查过程。最新已完成全部126个LLM目标矩阵的真实混合位宽量化、完整GGUF合并及同后端固定噪声十步采样，模型由6.71 GB缩至3.33 GB。详见 [量化产物与验证记录](../reproduction/pi05_lerobot/QUANTIZED_MODEL_DEMO.md)。跨后端严格NUMERICAL_MISMATCH保留，未放宽阈值；本次采用同后端配对比较测量量化影响。四帧教学校准不代表论文规模结果，LIBERO闭环尚未验证。
 
 ActQuant 本地版本：b64791125070652fe6b554e244fe809c79ef5246。

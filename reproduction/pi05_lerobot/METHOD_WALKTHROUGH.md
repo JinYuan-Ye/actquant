@@ -1,5 +1,7 @@
 # 从已修好的输入进入 ActQuant 方法
 
+本文使用四帧数据讲解格式与算法。正式版本采用60轨迹的全部11,777帧，结果与模型下载见 [FULL_QUANTIZATION_RESULTS.md](FULL_QUANTIZATION_RESULTS.md)；方法和数据契约相同，校准规模与统计结果需分别看待。
+
 截至2026-10-19：已完成4样本HSIC、位宽分配、Fisher，以及全部126个LLM目标矩阵的真实混合位宽量化。完整统一GGUF为3,331,893,600字节，同后端量化前后固定噪声十步采样均成功，详见 [QUANTIZED_MODEL_DEMO.md](QUANTIZED_MODEL_DEMO.md)。算法讲解见 [HSIC_DEMO.md](HSIC_DEMO.md)、[ALLOCATION_DEMO.md](ALLOCATION_DEMO.md) 和 [FISHER_DEMO.md](FISHER_DEMO.md)。跨后端严格数值状态仍为NUMERICAL_MISMATCH，保留原判据和 [诊断记录](CPP_FORWARD_DIAGNOSTICS.md)。样本来自同一轨迹四帧，不是论文60条轨迹校准集；视觉与action expert等保持基础精度，正式规模校准及LIBERO闭环仍待后续。
 
 ## 验证了什么

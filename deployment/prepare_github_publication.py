@@ -122,6 +122,48 @@ Operational handoff history, credentials, environments, original weights and dat
                 copy(path, "models/pi05-full-60ep/"+path.name)
         write("models/pi05-full-60ep/RELEASE.json", json.dumps({"release": f"https://github.com/{REPO}/releases/tag/{TAG}",
               "tag": TAG, "model_sha256": pipeline["model_sha256"], "calibration_frames": pipeline["calibration_frames"]}, indent=2)+"\n")
+        results_text = f"""# 全量60轨迹量化结果
+
+完整校准：60条轨迹，11,777帧，10/10/10/30轨迹来自spatial/object/goal/long。HSIC和Fisher均覆盖所有帧，重新分配位宽并实际量化全部126个LLM目标。使用固定LeRobot checkpoint及已验证输入适配，不复用四帧教学分数或Fisher。
+
+| 项目 | 实际结果 |
+|---|---:|
+| 完整基础GGUF字节数 | {artifact['base_gguf_bytes']:,} |
+| 完整量化GGUF字节数 | {artifact['quantized_gguf_bytes']:,} |
+| 文件缩小比例 | {artifact['size_reduction_fraction']*100:.4f}% |
+| 126目标参数加权block位宽 | {artifact['actual_block_bpw']:.9f} |
+| 逐权重Fisher日志确认 | {artifact['per_weight_fisher_log_count']} |
+| 统一模型tensor总数 | {artifact['total_tensors']} |
+| 保持基础权重字节不变的tensor | {artifact['unchanged_tensors']} |
+| 保留元数据字段 | {artifact['metadata_fields_preserved']} |
+
+实际格式分布：`{json.dumps(artifact['format_counts'], sort_keys=True)}`。2.347附近的平均位宽仅指126个目标，不是整份统一模型平均位宽。视觉、embedding、action expert、projector和norm保持基础精度。
+
+## 验证证据
+
+完整GGUF格式/来源/元数据审计通过；量化前后使用相同C++实现、输入、源RoPE约定、初始噪声进行十步动作采样，输出均有限。单观测反归一化7维动作RMSE为{paired['sampled_actions_denormalized_7d']['rmse']:.9f}，最大绝对差{paired['sampled_actions_denormalized_7d']['max_abs_diff']:.9f}。这些是控制器输入动作的误差指标，不是米，也不是任务成功率。
+
+跨后端严格NUMERICAL_MISMATCH与原容差保留。原高层服务接口及LIBERO闭环尚未验证，任务质量NOT_EVALUATED。相同校准规模不等于已复现论文成功率。
+
+机器可读证据位于`reproduction/results/pi05-full-01/`：data-audit.json、hsic/run.json、allocation.json、fisher/run.json、fisher-audit.json、quantized/artifact-audit.json、paired-validation.json和pipeline.json。
+
+## 下载完整模型
+
+[Release](https://github.com/{REPO}/releases/tag/{TAG})包含全部模型分片、tokenizer、归一化统计、RoPE快照、运行约定及摘要清单。下载全部附件后执行：
+
+```bash
+python restore_release_model.py --directory /path/to/downloaded-assets
+```
+
+这条命令按照MODEL_SHA256.json核验每个分片，按原顺序还原pi05.gguf并验证完整摘要；不覆盖已有模型。Windows可将参数改成D:/actquant/model等实际下载目录。
+
+完整模型SHA256：`{pipeline['model_sha256']}`。
+
+Fisher低利用率问题及数值一致性验证见[FISHER_PERFORMANCE.md](FISHER_PERFORMANCE.md)，数据与运行入口见[FULL_CALIBRATION_RUN.md](FULL_CALIBRATION_RUN.md)。
+"""
+        results_relative = "reproduction/pi05_lerobot/FULL_QUANTIZATION_RESULTS.md"
+        (ROOT / results_relative).write_text(results_text, encoding="utf-8")
+        write(results_relative, results_text)
     write("README.md", f"""# ActQuant π₀.₅ 全量校准复现
 
 {state_text}。使用 README 指定的 LeRobot checkpoint，按原论文仓库10/10/10/30轨迹配置，使用60条轨迹的全部11,777帧重新计算HSIC、位宽分配和Fisher，量化126个LLM目标。视觉、embedding与action expert保持基础精度。
@@ -141,7 +183,10 @@ python deployment/restore_release_model.py --directory /path/to/downloaded-asset
 - 数据格式及算法：[方法导读](reproduction/pi05_lerobot/METHOD_WALKTHROUGH.md)、[HSIC](reproduction/pi05_lerobot/HSIC_DEMO.md)、[位宽分配](reproduction/pi05_lerobot/ALLOCATION_DEMO.md)、[Fisher](reproduction/pi05_lerobot/FISHER_DEMO.md)。
 - 主要问题与解决：[问题汇总](deployment/TEACHING_RELEASE_ISSUES.md)、[兼容性核查](deployment/PI05_CHECKPOINT_COMPATIBILITY.md)。问题汇总保留了教学阶段历史；正式规模数据以本次报告为准。
 - 正式运行：[FULL_CALIBRATION_RUN.md](reproduction/pi05_lerobot/FULL_CALIBRATION_RUN.md)，原始审计和结果在[reproduction/results/pi05-full-01](reproduction/results/pi05-full-01)。
+- 完成后的模型指标与下载说明：[FULL_QUANTIZATION_RESULTS.md](reproduction/pi05_lerobot/FULL_QUANTIZATION_RESULTS.md)。
 - 依赖版本与构建：[deployment](deployment)、[UPSTREAM_SOURCES.json](UPSTREAM_SOURCES.json)。
+
+原始基线模型、观测输入与参考数组、完整校准数据和大型Fisher中间文件按文档在本地准备，不随源码发布。
 
 克隆本仓库后初始化两个固定版本依赖：
 

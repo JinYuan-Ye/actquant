@@ -1,0 +1,9 @@
+{
+  "calibration": "60 stratified episodes; all 11777 frames",
+  "validated_runtime": "external fixed-input CUDA probe; matched_rope; 10-step paired sampling",
+  "valid_prefix_contract": "state-bearing prompt, two real cameras, compact valid prefix",
+  "rope": "source BF16-rounded frequencies in rope_inv_freq.f32",
+  "original_serve_policy_validated": false,
+  "task_quality": "NOT_EVALUATED",
+  "cross_backend_strict_status": "NUMERICAL_MISMATCH retained"
+}

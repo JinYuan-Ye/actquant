@@ -1,6 +1,6 @@
 # LeRobot π₀.₅ 参考与输入兼容适配
 
-最新全量任务（2026-10-19）：用户已授权60轨迹全部帧校准与量化。四套源数据104文件已校验，导出11,777帧，数据审计通过，全帧HSIC已在GPU运行；后续自动执行分配、Fisher和量化。进度与命令说明见 [FULL_CALIBRATION_RUN.md](FULL_CALIBRATION_RUN.md)，当前事实以 `reproduction/results/pi05-full-01/pipeline.json` 为准。以下四帧模型是已完成的历史教学版，不能当作本轮全量成品。
+全量版本采用60轨迹的全部11,777帧，产物、验证指标和下载说明见 [FULL_QUANTIZATION_RESULTS.md](FULL_QUANTIZATION_RESULTS.md)。数据与命令见 [FULL_CALIBRATION_RUN.md](FULL_CALIBRATION_RUN.md)，机器可读状态为 `reproduction/results/pi05-full-01/pipeline.json`，只有PASS才表示完整流程完成。以下四帧模型属于历史教学版，不能当作全量成品。
 
 当前阶段（2026-10-19）：**第一份完整LLM混合位宽量化模型已生成并完成同后端十步采样**，见 [量化模型与实测](QUANTIZED_MODEL_DEMO.md)。126个目标全部量化，模型6.71GB→3.33GB；四帧校准、单观测配对运行，任务质量未验收。此前跨后端严格NUMERICAL_MISMATCH完整保留，见 [C++诊断](CPP_FORWARD_DIAGNOSTICS.md)，未通过改阈值转成PASS。其他流程见 [量化衔接](QUANTIZATION_BRIDGE.md)、[HSIC](HSIC_DEMO.md)、[分配](ALLOCATION_DEMO.md)、[Fisher](FISHER_DEMO.md) 和 [方法导读](METHOD_WALKTHROUGH.md)。正式校准和LIBERO闭环尚未完成。
 

@@ -1,5 +1,5 @@
 {
-  "status": "RUNNING",
+  "status": "PASS",
   "stage": "fisher",
   "contract": {
     "checkpoint_route": "LeRobot with audited external input adaptation",
@@ -571,8 +571,12 @@
     "cpu_threads": 8,
     "per_sample_empty_cache": false
   },
-  "resumed_samples": 200,
-  "completed_samples": 560,
-  "duration_seconds": 141.85402854299173,
-  "checkpoint_samples": 400
+  "resumed_samples": 5400,
+  "completed_samples": 11777,
+  "duration_seconds": 1664.6665671449737,
+  "checkpoint_samples": 11777,
+  "llm_matrices": 126,
+  "vision_matrices": 162,
+  "loss_mean": 0.0832162176004146,
+  "peak_gpu_gib": 20.33458423614502
 }

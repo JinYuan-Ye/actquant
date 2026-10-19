@@ -1,5 +1,5 @@
 {
-  "status": "RUNNING",
+  "status": "PASS",
   "stages": {
     "export": {
       "status": "PASS",
@@ -80,7 +80,7 @@
       "seconds": 0.21435719198780134
     },
     "fisher": {
-      "status": "RUNNING",
+      "status": "PASS",
       "command": [
         "/workspace/actquant/envs/openpi-server/bin/python",
         "-u",
@@ -97,13 +97,13 @@
         "200",
         "--resume"
       ],
-      "started_utc": "2026-10-19T15:43:16Z",
+      "started_utc": "2026-10-19T16:07:54Z",
       "previous_attempt": {
         "status": "RUNNING",
         "command": [
           "/workspace/actquant/envs/openpi-server/bin/python",
           "-u",
-          "/workspace/actquant/reproduction/pi05_lerobot/run_calibration.py",
+          "/workspace/actquant/reproduction/pi05_lerobot/run_fisher_gpu.py",
           "--stage",
           "fisher",
           "--calib-dir",
@@ -113,23 +113,164 @@
           "--output",
           "/workspace/actquant/reproduction/results/pi05-full-01/fisher",
           "--checkpoint-every",
-          "200"
+          "200",
+          "--resume"
         ],
-        "started_utc": "2026-10-19T15:27:09Z",
-        "pid": 41120,
-        "seconds": 930.1299577500322
+        "started_utc": "2026-10-19T15:43:16Z",
+        "previous_attempt": {
+          "status": "RUNNING",
+          "command": [
+            "/workspace/actquant/envs/openpi-server/bin/python",
+            "-u",
+            "/workspace/actquant/reproduction/pi05_lerobot/run_calibration.py",
+            "--stage",
+            "fisher",
+            "--calib-dir",
+            "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+            "--num-samples",
+            "11777",
+            "--output",
+            "/workspace/actquant/reproduction/results/pi05-full-01/fisher",
+            "--checkpoint-every",
+            "200"
+          ],
+          "started_utc": "2026-10-19T15:27:09Z",
+          "pid": 41120,
+          "seconds": 930.1299577500322
+        },
+        "pid": 42911,
+        "seconds": 1360.180609698
       },
-      "pid": 42911,
-      "seconds": 140.02388393500587
+      "pid": 44702,
+      "seconds": 1668.291248005,
+      "returncode": 0
+    },
+    "fisher_audit": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/audit_full_calibration.py",
+        "--calib-dir",
+        "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+        "--fisher-dir",
+        "/workspace/actquant/reproduction/results/pi05-full-01/fisher",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/fisher-audit.json"
+      ],
+      "started_utc": "2026-10-19T16:35:42Z",
+      "pid": 46626,
+      "returncode": 0,
+      "seconds": 6.23585387901403
+    },
+    "quantization": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/quantize_llm.py",
+        "--allocation",
+        "/workspace/actquant/reproduction/results/pi05-full-01/allocation.json",
+        "--imatrix",
+        "/workspace/actquant/reproduction/results/pi05-full-01/fisher/fisher_llm.gguf",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/quantized"
+      ],
+      "started_utc": "2026-10-19T16:35:48Z",
+      "pid": 46753,
+      "seconds": 152.79455918597523,
+      "returncode": 0
+    },
+    "merge": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/finish_llm_quantization.py",
+        "--run-dir",
+        "/workspace/actquant/reproduction/results/pi05-full-01/quantized",
+        "--allocation",
+        "/workspace/actquant/reproduction/results/pi05-full-01/allocation.json",
+        "--imatrix",
+        "/workspace/actquant/reproduction/results/pi05-full-01/fisher/fisher_llm.gguf"
+      ],
+      "started_utc": "2026-10-19T16:38:21Z",
+      "pid": 48773,
+      "seconds": 13.327050323947333,
+      "returncode": 0
+    },
+    "baseline": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/run_cpp_probe.py",
+        "--reference",
+        "/workspace/actquant/reproduction/results/pi05-cpp-reference-01",
+        "--model",
+        "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/unified/pi05.gguf",
+        "--mode",
+        "matched_rope",
+        "--ode-steps",
+        "10",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/baseline"
+      ],
+      "started_utc": "2026-10-19T16:38:34Z",
+      "pid": 48837,
+      "returncode": 2,
+      "seconds": 6.936380905972328
+    },
+    "quantized_forward": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/run_cpp_probe.py",
+        "--reference",
+        "/workspace/actquant/reproduction/results/pi05-cpp-reference-01",
+        "--model",
+        "/workspace/actquant/reproduction/results/pi05-full-01/quantized/model/pi05.gguf",
+        "--mode",
+        "matched_rope",
+        "--ode-steps",
+        "10",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/quantized_forward"
+      ],
+      "started_utc": "2026-10-19T16:38:41Z",
+      "pid": 48913,
+      "returncode": 2,
+      "seconds": 4.529213593981694
+    },
+    "paired_validation": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/measure_quantization_effect.py",
+        "--baseline",
+        "/workspace/actquant/reproduction/results/pi05-full-01/baseline",
+        "--quantized",
+        "/workspace/actquant/reproduction/results/pi05-full-01/quantized_forward",
+        "--model-dir",
+        "/workspace/actquant/reproduction/results/pi05-full-01/quantized/model",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/paired-validation.json"
+      ],
+      "started_utc": "2026-10-19T16:38:46Z",
+      "pid": 48987,
+      "returncode": 0,
+      "seconds": 0.16441777301952243
     }
   },
   "scope": "60 episodes, every selected frame; all126 LLM targets",
   "seed": 42,
-  "pid": 42843,
+  "pid": 44638,
   "runner_sha256": "1d754fc7f8dc286f92afdc0ecc4139f6b05fbe0fa0806c55aead7e20e17a5f82",
   "authorized_scope": "User explicitly requested full calibration-set quantization",
   "calib_dir": "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
-  "phase": "fisher",
+  "phase": "finished",
   "calibration_frames": 11777,
   "calibration_episodes": 60,
   "suites": [
@@ -171,5 +312,9 @@
       "IQ4_XS": 1
     }
   },
-  "error": "ValueError('Need at least 24 GiB free after data export for safe Fisher checkpoints and quantization')"
+  "error": "ValueError('Need at least 24 GiB free after data export for safe Fisher checkpoints and quantization')",
+  "model": "/workspace/actquant/reproduction/results/pi05-full-01/quantized/model/pi05.gguf",
+  "model_sha256": "35b2b430c9a9e94e3b105e65b155844b7c2d014096abc933a9c63680de99ca40",
+  "quality_acceptance": "NOT_EVALUATED",
+  "validation": "artifact_and_single_observation_paired_execution; not_LIBERO_success"
 }

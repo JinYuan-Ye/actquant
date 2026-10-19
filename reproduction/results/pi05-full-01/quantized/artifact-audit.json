@@ -1,0 +1,45 @@
+{
+  "status": "ARTIFACT_PASS",
+  "scope": "complete_pi05_container_with_all126_LLM_weights_quantized",
+  "calibration_samples": 11777,
+  "calibration_scope": "all_frames_of_stratified_60_episodes",
+  "full_calibration": true,
+  "calibration_suite_episodes": {
+    "spatial": 10,
+    "object": 10,
+    "goal": 10,
+    "long": 30
+  },
+  "quality_status": "requires_same_backend_forward_and_closed_loop_evaluation",
+  "per_weight_fisher_log_count": 126,
+  "quantized_llm_matrices": 126,
+  "unchanged_tensors": 688,
+  "total_tensors": 814,
+  "metadata_fields_preserved": 37,
+  "actual_block_bpw": 2.3470734126984127,
+  "encoded_block_bytes": 581431296,
+  "format_counts": {
+    "Q4_K": 29,
+    "IQ2_S": 18,
+    "Q2_K": 6,
+    "IQ2_XS": 65,
+    "IQ3_S": 2,
+    "IQ3_XXS": 5,
+    "IQ4_XS": 1
+  },
+  "base_gguf_bytes": 6714075456,
+  "quantized_gguf_bytes": 3331889504,
+  "size_ratio_base_over_quantized": 2.015095472986009,
+  "size_reduction_fraction": 0.5037455974638364,
+  "model_dir": "/workspace/actquant/reproduction/results/pi05-full-01/quantized/model",
+  "unchanged_components": [
+    "vision",
+    "embedding",
+    "action_expert",
+    "projector",
+    "norms",
+    "normalization_stats"
+  ],
+  "cross_backend_strict_result": "prior numerical mismatch retained, not relabeled PASS",
+  "seconds": 12.93653050402645
+}

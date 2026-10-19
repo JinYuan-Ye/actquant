@@ -1,0 +1,55 @@
+{
+  "data": {
+    "status": "PASS",
+    "scope": "60_stratified_episodes_all_frames",
+    "frames": 11777,
+    "episodes": 60,
+    "suites": [
+      {
+        "suite": "spatial",
+        "episodes": 10,
+        "tasks": 10,
+        "frames": 1216
+      },
+      {
+        "suite": "object",
+        "episodes": 10,
+        "tasks": 10,
+        "frames": 1388
+      },
+      {
+        "suite": "goal",
+        "episodes": 10,
+        "tasks": 10,
+        "frames": 1208
+      },
+      {
+        "suite": "long",
+        "episodes": 30,
+        "tasks": 10,
+        "frames": 7965
+      }
+    ],
+    "all_action_windows_and_tails": "PASS",
+    "finite_state_actions": "PASS",
+    "real_cameras_and_zero_placeholder": "PASS",
+    "image_shape": [
+      11777,
+      3,
+      256,
+      256,
+      3
+    ],
+    "pixel_file_logical_bytes": 6946357376,
+    "pixel_file_allocated_bytes": 6174646272
+  },
+  "fisher": {
+    "status": "PASS",
+    "samples": 11777,
+    "targets": 288,
+    "llm": 126,
+    "vision": 162,
+    "loss_mean": 0.08321622014045715,
+    "names_shapes_values_counts": "PASS"
+  }
+}

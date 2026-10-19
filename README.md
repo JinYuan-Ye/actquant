@@ -1,6 +1,8 @@
 # ActQuant π₀.₅ 全量校准复现
 
-量化所需代码和说明已提供，全量Fisher计算进行中，模型尚未完成。使用 README 指定的 LeRobot checkpoint，按原论文仓库10/10/10/30轨迹配置，使用60条轨迹的全部11,777帧重新计算HSIC、位宽分配和Fisher，量化126个LLM目标。视觉、embedding与action expert保持基础精度。
+全量量化和文件/单观测配对执行检查已完成。使用 README 指定的 LeRobot checkpoint，按原论文仓库10/10/10/30轨迹配置，使用60条轨迹的全部11,777帧重新计算HSIC、位宽分配和Fisher，量化126个LLM目标。视觉、embedding与action expert保持基础精度。
+
+模型文件 3,331,889,504 字节，126个目标矩阵实际平均 2.347073413 bit/权重。单观测反归一化7维动作RMSE为 0.03007693。这是误差测量，质量状态NOT_EVALUATED，尚无LIBERO成功率。
 
 完整模型完成并通过验证后提供于：[GitHub Release](https://github.com/JinYuan-Ye/actquant/releases/tag/pi05-full-60ep-20261019-v1)。附件按不超过1GiB分片，下载Release中的全部附件后，在本地执行：
 
@@ -17,6 +19,7 @@ python deployment/restore_release_model.py --directory /path/to/downloaded-asset
 - 数据格式及算法：[方法导读](reproduction/pi05_lerobot/METHOD_WALKTHROUGH.md)、[HSIC](reproduction/pi05_lerobot/HSIC_DEMO.md)、[位宽分配](reproduction/pi05_lerobot/ALLOCATION_DEMO.md)、[Fisher](reproduction/pi05_lerobot/FISHER_DEMO.md)。
 - 主要问题与解决：[问题汇总](deployment/TEACHING_RELEASE_ISSUES.md)、[兼容性核查](deployment/PI05_CHECKPOINT_COMPATIBILITY.md)。问题汇总保留了教学阶段历史；正式规模数据以本次报告为准。
 - 正式运行：[FULL_CALIBRATION_RUN.md](reproduction/pi05_lerobot/FULL_CALIBRATION_RUN.md)，原始审计和结果在[reproduction/results/pi05-full-01](reproduction/results/pi05-full-01)。
+- 完成后的模型指标与下载说明：[FULL_QUANTIZATION_RESULTS.md](reproduction/pi05_lerobot/FULL_QUANTIZATION_RESULTS.md)。
 - 依赖版本与构建：[deployment](deployment)、[UPSTREAM_SOURCES.json](UPSTREAM_SOURCES.json)。
 
 克隆本仓库后初始化两个固定版本依赖：

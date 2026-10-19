@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "scope": "60 episodes, every selected frame; all126 LLM targets",
+  "seed": 42,
+  "pid": 44638,
+  "runner_sha256": "1d754fc7f8dc286f92afdc0ecc4139f6b05fbe0fa0806c55aead7e20e17a5f82",
+  "authorized_scope": "User explicitly requested full calibration-set quantization",
+  "calib_dir": "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+  "phase": "finished",
+  "calibration_frames": 11777,
+  "calibration_episodes": 60,
+  "suites": [
+    {
+      "suite": "spatial",
+      "episodes": 10,
+      "tasks": 10,
+      "frames": 1216
+    },
+    {
+      "suite": "object",
+      "episodes": 10,
+      "tasks": 10,
+      "frames": 1388
+    },
+    {
+      "suite": "goal",
+      "episodes": 10,
+      "tasks": 10,
+      "frames": 1208
+    },
+    {
+      "suite": "long",
+      "episodes": 30,
+      "tasks": 10,
+      "frames": 7965
+    }
+  ],
+  "allocation": {
+    "target_bpw": 2.3471,
+    "achieved_bpw": 2.3470734126984127,
+    "format_counts": {
+      "Q4_K": 29,
+      "IQ2_S": 18,
+      "Q2_K": 6,
+      "IQ2_XS": 65,
+      "IQ3_S": 2,
+      "IQ3_XXS": 5,
+      "IQ4_XS": 1
+    }
+  },
+  "error": "ValueError('Need at least 24 GiB free after data export for safe Fisher checkpoints and quantization')",
+  "model": "/workspace/actquant/reproduction/results/pi05-full-01/quantized/model/pi05.gguf",
+  "model_sha256": "35b2b430c9a9e94e3b105e65b155844b7c2d014096abc933a9c63680de99ca40",
+  "quality_acceptance": "NOT_EVALUATED",
+  "validation": "artifact_and_single_observation_paired_execution; not_LIBERO_success"
+}
