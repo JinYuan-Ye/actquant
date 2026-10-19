@@ -22,6 +22,8 @@ python deployment/restore_release_model.py --directory /path/to/downloaded-asset
 - 完成后的模型指标与下载说明：[FULL_QUANTIZATION_RESULTS.md](reproduction/pi05_lerobot/FULL_QUANTIZATION_RESULTS.md)。
 - 依赖版本与构建：[deployment](deployment)、[UPSTREAM_SOURCES.json](UPSTREAM_SOURCES.json)。
 
+原始基线模型、观测输入与参考数组、完整校准数据和大型Fisher中间文件按文档在本地准备，不随源码发布。
+
 克隆本仓库后初始化两个固定版本依赖：
 
 ```bash

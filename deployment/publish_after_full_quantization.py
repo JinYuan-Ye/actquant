@@ -88,7 +88,8 @@ def main():
     args.state.parent.mkdir(parents=True, exist_ok=True)
     lock = args.state.with_suffix(".lock").open("a")
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    if args.state.exists() and load(args.state).get("status") == "PUBLISHED":
+    previous_state = load(args.state) if args.state.exists() else {}
+    if previous_state.get("status") == "PUBLISHED":
         print("Publication already completed; preserving it", flush=True)
         return
     state = {"status": "WAITING_FOR_FULL_QUANTIZATION", "repo": REPO, "tag": TAG, "pid": os.getpid(), "uploads_verified": []}
@@ -106,6 +107,7 @@ def main():
         while True:
             pipeline = load(args.pipeline)
             if pipeline["status"] == "PASS":
+                state["pipeline_phase"] = pipeline["phase"]
                 break
             if pipeline["status"] != "RUNNING":
                 raise RuntimeError(f"Full pipeline is {pipeline['status']}; publishing is blocked")
@@ -169,10 +171,24 @@ Model source: https://huggingface.co/lerobot/pi05_libero_finetuned_v044/tree/715
         if release is None:
             gh("release", "create", TAG, "--repo", REPO, "--draft", "--target", commit,
                "--title", "Pi05 full 60-episode LLM quantization", "--notes-file", notes_path)
-            releases = api(f"repos/{REPO}/releases?per_page=100")
-            release = next(r for r in releases if r["tag_name"] == TAG)
+            for attempt in range(10):
+                releases = api(f"repos/{REPO}/releases?per_page=100")
+                release = next((r for r in releases if r["tag_name"] == TAG), None)
+                if release is not None:
+                    break
+                time.sleep(1)
+            if release is None:
+                raise RuntimeError("Created Release is not visible yet; safe to retry publication")
         if release["target_commitish"] != commit:
-            raise ValueError("Existing Release targets another commit; refusing replacement")
+            if (release["draft"] and not release["assets"] and
+                release["author"]["login"] == user["login"] and
+                release["target_commitish"] == previous_state.get("commit")):
+                # The preceding attempt created an empty draft before source fixes.
+                # Update only that owned, empty draft; published releases stay immutable.
+                release = json.loads(gh("api", "--method", "PATCH", f"repos/{REPO}/releases/{release['id']}",
+                                        "-f", "target_commitish="+commit))
+            else:
+                raise ValueError("Existing Release targets another commit; refusing replacement")
         state.update(status="UPLOADING_MODEL_ASSETS", release_id=release["id"])
         save()
         expected_assets = {path.name: path for path in assets.iterdir() if path.is_file()}
