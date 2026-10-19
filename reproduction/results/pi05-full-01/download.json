@@ -1,0 +1,738 @@
+{
+  "status": "PASS",
+  "repo": "openvla/modified_libero_rlds",
+  "revision": "6ce6aaaaabdbe590b1eef5cd29c0d33f14a08551",
+  "total_bytes": 10230689658,
+  "files": [
+    {
+      "path": "libero_10_no_noops/1.0.0/dataset_info.json",
+      "bytes": 1139,
+      "sha256": null,
+      "git_blob": "55415bde7be4a313b0cf3751cff6b3c607dce959"
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/features.json",
+      "bytes": 9195,
+      "sha256": null,
+      "git_blob": "a5c8abcf90cb16a51b2e7900f4bdbdafa0566816"
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00000-of-00032",
+      "bytes": 118511359,
+      "sha256": "40e014ad56148f3268fc19299f311265a16373186f22304293304a0911331af3",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00001-of-00032",
+      "bytes": 124480836,
+      "sha256": "ce12aa5077f83c8795642f867eca68957edb36224d5c963593a785f0b2c6e543",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00002-of-00032",
+      "bytes": 117713197,
+      "sha256": "97074c6f69b3ccc159badb9480e420ac4ec5635fb6e7cc9fc7b6bc9b093de85d",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00003-of-00032",
+      "bytes": 109607447,
+      "sha256": "3e9ca45c856083177a2580bf14e0d3d2ff663b75ee20a35c6a112a2a2f8511a1",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00004-of-00032",
+      "bytes": 123896492,
+      "sha256": "5abc235c3034bbbfc7c974266ec8138326f3d52deb265b39a61b851e2dff8d05",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00005-of-00032",
+      "bytes": 115361029,
+      "sha256": "536c3afee248148134072c087d188d8c93ee8383eb76efb1d577454d95650080",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00006-of-00032",
+      "bytes": 123528059,
+      "sha256": "aedda940609417867046b8c4959694aeb9a30cfaab4ead16a7ba397bd3bc5bca",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00007-of-00032",
+      "bytes": 119422890,
+      "sha256": "bfb7caa49d4c244e9ee3158b427ead2a52107ac765e18c3e834a9c030ebe7a9f",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00008-of-00032",
+      "bytes": 121060671,
+      "sha256": "cc05dcc2cf733403aded088bef2cdd50fa379e11e17e055f82f09bdfb50b7770",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00009-of-00032",
+      "bytes": 98457766,
+      "sha256": "3e78c227749477bc0fc579cf702e342f7ee51565fcd50e4bc623d264f966a811",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00010-of-00032",
+      "bytes": 110166471,
+      "sha256": "07735089278af85a7fc2861f5b1be6cc178a8cbf1360935ef8b0baf6644b8f79",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00011-of-00032",
+      "bytes": 105204231,
+      "sha256": "a3e11cf5962a07bcdef52f4d16d89acf88aa4660c4f468094f5eec3cf08c77cf",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00012-of-00032",
+      "bytes": 121530522,
+      "sha256": "ac2b10559504a62ee5d6420707dd3297f5288aa44558fbc301735908a42259cb",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00013-of-00032",
+      "bytes": 107871581,
+      "sha256": "c593d75ce5eeaac435b07956b8b3239c32ff93a9138e6b5e697d02e832fa89b6",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00014-of-00032",
+      "bytes": 114274220,
+      "sha256": "da641b5de3d3a5782e85e3ad980a36aee38d3652456788a8858fdb4a526c1bea",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00015-of-00032",
+      "bytes": 124344375,
+      "sha256": "8d67ba19730792d4487700c473fdebd5d301dbaa9d30121b7b7d17370762e750",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00016-of-00032",
+      "bytes": 109606035,
+      "sha256": "5fc8d1a567451215759e35e91f42d05ddb7e0b856f18cd8fa927d9533f4905a3",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00017-of-00032",
+      "bytes": 108248774,
+      "sha256": "6435ba0e995d5f8385f8ec2d9a31fb26da49c1176af5fbf7b86c540d7f1bb831",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00018-of-00032",
+      "bytes": 110979721,
+      "sha256": "d6e8e0cfc55d9374c751ee4faaf9d8255738124033e7bad51c12ce8bef704e04",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00019-of-00032",
+      "bytes": 100776194,
+      "sha256": "9fafc3d6c148daf128c45b916eacb29da19d62d1e17d3ee25cf11c48c61e0202",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00020-of-00032",
+      "bytes": 121175162,
+      "sha256": "e6de6006d4093dae6ef67cf3d3d868c8d58137ab28087ac7f82b87112df31041",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00021-of-00032",
+      "bytes": 114175638,
+      "sha256": "4cfd9fb5d7adcd7662bdbf5f8986df6a2d33fe6dc29ea86270b396225e8171e5",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00022-of-00032",
+      "bytes": 106210897,
+      "sha256": "d43ef874e852a297b92cd89c4845bd0fa7e3dcba13a7d6a22585b514f5b5db55",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00023-of-00032",
+      "bytes": 116871529,
+      "sha256": "cb5ea4f9873dcc39c59924b22eba81d195af6a7a6666d56129aad2c2fad46443",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00024-of-00032",
+      "bytes": 115023874,
+      "sha256": "662a6295bfba72af92f9adca45f73b9f2f4b80bd824169f71ddc111bb5bc8d00",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00025-of-00032",
+      "bytes": 114774648,
+      "sha256": "24f18fd8ec0f3e56a823e8e33780d51d643f6e9ddf6d36325eb3743e68a05cac",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00026-of-00032",
+      "bytes": 118823623,
+      "sha256": "6f75a98831c52cb4ff00cdd36bae175b5d4e723e70970f40684876542a1790a4",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00027-of-00032",
+      "bytes": 113432540,
+      "sha256": "785595acf526876e69fd5a247f8ad24953a83e9f32320221014f1e5f1a434392",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00028-of-00032",
+      "bytes": 118127835,
+      "sha256": "b959fb430c2be6efb83345a0bcfdfd175ffc47fa741b9b2f4a625b3229747ec9",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00029-of-00032",
+      "bytes": 112236322,
+      "sha256": "bff07af64d56032d91b2a663468b2925eb6cce12d914b6b1282dd3e9263813f2",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00030-of-00032",
+      "bytes": 112951000,
+      "sha256": "3b2b00f60c907425f2b765c5dc49d8b64fe8bfcf7e642e713005a484a0344d50",
+      "git_blob": null
+    },
+    {
+      "path": "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00031-of-00032",
+      "bytes": 107960152,
+      "sha256": "9148196efbed67c14099d5a3d0830b6fb97cf8ac429dfbe72cd25da0107a9cfa",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/dataset_info.json",
+      "bytes": 921,
+      "sha256": null,
+      "git_blob": "8615daa4270f9a0b60aacd1f479fb54139d27da4"
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/features.json",
+      "bytes": 9195,
+      "sha256": null,
+      "git_blob": "a5c8abcf90cb16a51b2e7900f4bdbdafa0566816"
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00000-of-00016",
+      "bytes": 115263729,
+      "sha256": "94ea50156819fe355e5ad821e86ef1b0314543afed22a0148159a5db29c8767f",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00001-of-00016",
+      "bytes": 122314346,
+      "sha256": "1bb209f8d5d77a95f0f510082783a899146413fb0f4ddab98bc5e2f70788bd2e",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00002-of-00016",
+      "bytes": 111161094,
+      "sha256": "ffa8312c784d21a2153368af117111160b2284dc5516f106c10302d33e649372",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00003-of-00016",
+      "bytes": 118915967,
+      "sha256": "b9aa699ed4816392385887c1480491a046cf8138e72f77f60eb8b74573179cd5",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00004-of-00016",
+      "bytes": 111770716,
+      "sha256": "f6b81eb1bebc367af3296fc00347c3e7baaf93f2317fefcd18099c4de31513ec",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00005-of-00016",
+      "bytes": 116700744,
+      "sha256": "c2895f15b5b213ef6a470c217b673bd07fbd9c133294c06f9cfd9abf3143c17f",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00006-of-00016",
+      "bytes": 109424723,
+      "sha256": "ebc1edaeeaa0bee2920b9ee56b1b42714e60644b1598b806bd48b1cf5e65de9c",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00007-of-00016",
+      "bytes": 120320649,
+      "sha256": "2b3f5728d7384517898a750ff708dbd9083bf00246b83b6eb4b3fd94e77e01b7",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00008-of-00016",
+      "bytes": 106387822,
+      "sha256": "479dc1e3ff5430005cfe967f81e35762119eba6b20b0e5fe439aacfb0ef904c4",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00009-of-00016",
+      "bytes": 131705068,
+      "sha256": "27bf26e815c83654633f9201a59c76bd16d79584ffd68bb161ffad6500d01601",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00010-of-00016",
+      "bytes": 112917050,
+      "sha256": "ae12850fa7a6da575c05a964633154adb02bd3e51e9cd2c0bcee587ada0b3c84",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00011-of-00016",
+      "bytes": 117498952,
+      "sha256": "e3d9595b066bc0474c6904ce5092e86d669e2d0babf4b74d2180dce5bb7547e1",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00012-of-00016",
+      "bytes": 114167252,
+      "sha256": "337753daa622ec0c85b435f2bd87f2660fe7ea5b7801b0f795e728cd194fc86a",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00013-of-00016",
+      "bytes": 112179478,
+      "sha256": "e8880557ec605de0cf9fb4005e563bd95ee6c848fc8e6ebfc43a7934c5feea76",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00014-of-00016",
+      "bytes": 109162581,
+      "sha256": "1983d4bcb8085dcc19f4b956f763e0443288fce2485fdc5df942b84dcca6a2e4",
+      "git_blob": null
+    },
+    {
+      "path": "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00015-of-00016",
+      "bytes": 112008503,
+      "sha256": "1f23cf777b20027c533b4c0e6fc9896893a85afe90251fee0dfc588d86a99bb6",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/dataset_info.json",
+      "bytes": 1151,
+      "sha256": null,
+      "git_blob": "fb61983fb0613e4bb12ab239969812832449d4fa"
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/features.json",
+      "bytes": 9195,
+      "sha256": null,
+      "git_blob": "a5c8abcf90cb16a51b2e7900f4bdbdafa0566816"
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00000-of-00032",
+      "bytes": 85829868,
+      "sha256": "0678b01f1119f77c5c0387a73857dbc16fc60dcffa3bbbec17c30df5fcef374a",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00001-of-00032",
+      "bytes": 85652096,
+      "sha256": "55d2c3b1dbd2b5ae5c83e3c552790b0eaaca09f3947daadf77586450565dc741",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00002-of-00032",
+      "bytes": 94135044,
+      "sha256": "faf67f4bbe796620975b9600d0e7f5c3ee49013efd81a5051d38569184e09abf",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00003-of-00032",
+      "bytes": 85654002,
+      "sha256": "c7ebe9e12eb73ad8cfd6702231e3e89fa9e7ed72f609433f98cf70e6966d4661",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00004-of-00032",
+      "bytes": 90239235,
+      "sha256": "9a435842a7f712d6ca8d0977dda3327ba806d8f1f73c597250f74610b4d3d860",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00005-of-00032",
+      "bytes": 84931439,
+      "sha256": "87a67f60af45aa7f3dbc4efcb22fba1a2f0bef21123074775ab0068a6e48ed16",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00006-of-00032",
+      "bytes": 82256294,
+      "sha256": "cd3520d52af8f36b3756e9598e16e6c0125dc191713b3a020b0f7b6c87be5e6f",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00007-of-00032",
+      "bytes": 94377159,
+      "sha256": "4511b24f46621d0d4fabdda913d96af7ff5c1a52e299d009d5477e73f6c0b529",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00008-of-00032",
+      "bytes": 88064505,
+      "sha256": "cd5d3e2b04d5ecf955c74a8fa501d5d89570fae67a22ecc5a056332f31d91162",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00009-of-00032",
+      "bytes": 88505527,
+      "sha256": "fbb46b8a6e63a7caf82f6ea0bd37fd02e697dcfad451d86c7eee454b635d06dc",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00010-of-00032",
+      "bytes": 84860188,
+      "sha256": "0f7988096212d79c74c551825e4be47c15094a8887953dc574b7e7bafe8bcd23",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00011-of-00032",
+      "bytes": 87957045,
+      "sha256": "6a3620bee70264686529ddb4ffcc728d1270aa8e81e8589d2a53ead08f1c2dc3",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00012-of-00032",
+      "bytes": 88009812,
+      "sha256": "9896d85c14758975d2e33ee53e331a9eee9e6d22a080b9351e93e7b87b532d6d",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00013-of-00032",
+      "bytes": 93491619,
+      "sha256": "61ac715e3e4468dd858e48a6def67cdac3a701a1e8ce242e177e1c82aac903ec",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00014-of-00032",
+      "bytes": 84544540,
+      "sha256": "9d127c955d2c1a23cb1e0a339503f9c467692d794c14f3dd37742e2f0fd4ed2d",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00015-of-00032",
+      "bytes": 88652080,
+      "sha256": "47a0e22085257e81c23534753046d0f1e939a616981b9360d79c140e1e9b8df1",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00016-of-00032",
+      "bytes": 83516139,
+      "sha256": "91bbbff07e44acfdf136f58c4113f50c028700038248541a03e5ae03b507ae6e",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00017-of-00032",
+      "bytes": 83804215,
+      "sha256": "b9f9689e402a3aaa1cb7f95fade885654b94188b2212181bdc2ccd986faa6116",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00018-of-00032",
+      "bytes": 97393940,
+      "sha256": "f18769a5a501ab5198b1d15a8f9b0bde6723e408d9673ce48b5da5a36d02fa1c",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00019-of-00032",
+      "bytes": 87421118,
+      "sha256": "22e6414c2fa1d9d80caf71055041155fd5aafce983813c7f958ee93e9772c972",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00020-of-00032",
+      "bytes": 87135263,
+      "sha256": "8cceb42dd8ddc9fb9a7b17d2e10a3fb62bf6c876f3a6e32e68abef415e16a14c",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00021-of-00032",
+      "bytes": 88224643,
+      "sha256": "dfb30fa5676c2853b84e10a5d7184f89c324efcad93a1c86865c55f62564ab75",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00022-of-00032",
+      "bytes": 91511134,
+      "sha256": "5e27eb364c48a3cf695d59f7be2ce1ed1ab21c09072286728359f24a2bbf0819",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00023-of-00032",
+      "bytes": 87599415,
+      "sha256": "45d71178d22b95cb37b4063c231a2b724a64443bff4508f316e3499cbcff1f32",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00024-of-00032",
+      "bytes": 92640557,
+      "sha256": "213647a165d82b55e62dd139193c82faf53fc5d58ec2031dfad077bf1da23b8d",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00025-of-00032",
+      "bytes": 80481956,
+      "sha256": "7570d78fe652dbf5728c83690218f49b03c9a3a47cd0a0f3c421b94c641fef1e",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00026-of-00032",
+      "bytes": 94320363,
+      "sha256": "61498ecc85eb80adb8a4e9777848c33b8b4bcc61f37f50b12d1f334d72373db5",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00027-of-00032",
+      "bytes": 85032598,
+      "sha256": "067aaec0f78d4a2d32332c514274f3b004a9838bab45af8fb0fede4cbb5675f7",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00028-of-00032",
+      "bytes": 88814530,
+      "sha256": "9580d31ca6db071ae6ab71258ee944b80cedfa459e9f791a82c09918776bd30a",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00029-of-00032",
+      "bytes": 89457476,
+      "sha256": "7bf041b7cfcd2abf9c658c12dc0065b3545b3218f929db7419d7c8ee8fe29151",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00030-of-00032",
+      "bytes": 88560863,
+      "sha256": "8fdcf7b87052dc7abb94991a424c59923bdd81fe69aa77926ae846268ad1fc4f",
+      "git_blob": null
+    },
+    {
+      "path": "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00031-of-00032",
+      "bytes": 84243760,
+      "sha256": "1c8ca9cbb1994467a4e180a915dbdbde405a3ceab33f44e1092c7b8f675783b5",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/dataset_info.json",
+      "bytes": 930,
+      "sha256": null,
+      "git_blob": "bcb0f88588084c51e1a6d68bca3e3791030fa8fc"
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/features.json",
+      "bytes": 9195,
+      "sha256": null,
+      "git_blob": "a5c8abcf90cb16a51b2e7900f4bdbdafa0566816"
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00000-of-00016",
+      "bytes": 118202941,
+      "sha256": "6d6360559a4b71df3bcabd9b55a75451f04375449ca5267616cbc1c21528eac5",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00001-of-00016",
+      "bytes": 117638784,
+      "sha256": "9b0c706e9796304dbc40be5f0ccf6a407a471cd3aecbecfc3baab2af26a2a631",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00002-of-00016",
+      "bytes": 124105247,
+      "sha256": "e2be727ff29840040cecbce68ee17d7118129cc64d58c2a60ea38967a7482456",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00003-of-00016",
+      "bytes": 114001484,
+      "sha256": "ca5c55cef57390f3e3c8a4ef0cbfe8b155b9f7e5a8b37c993f676faecbe25a3a",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00004-of-00016",
+      "bytes": 123511634,
+      "sha256": "c29887f8cee8d761439ec865884b8ba1877a3c3d2d886f1f0e802b93b863f268",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00005-of-00016",
+      "bytes": 119156456,
+      "sha256": "58dddf6a314a3c2fa6db405bf185313f0984f1778db84bcc9799279fbf5cca26",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00006-of-00016",
+      "bytes": 125554213,
+      "sha256": "2dfaef9cfc3786ca2b99124f220bb883c654e173fd77a1da2d77d6ae50a16373",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00007-of-00016",
+      "bytes": 116016812,
+      "sha256": "e86de6f6a090f7abe323debf91a04f6e19e4b22a8fe87ca40a244b4f3304fd28",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00008-of-00016",
+      "bytes": 115049321,
+      "sha256": "7d787a79b404b65b8cd213e004359908c2a00473531992abec7d580efce6d722",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00009-of-00016",
+      "bytes": 123912982,
+      "sha256": "917d05bb4c3f9938b75e08c7344e2282f72d1be97a6b20ea9938dc25ef573612",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00010-of-00016",
+      "bytes": 125254897,
+      "sha256": "ffa2df4872379462dcbb76e79fb79eb14770530ccfdad0ba2f676f80ed583cff",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00011-of-00016",
+      "bytes": 115996912,
+      "sha256": "561b132619aa8980d125ee4bac6543e1ad3f1fee4bfe9b2a81877bcb2dab829a",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00012-of-00016",
+      "bytes": 120268059,
+      "sha256": "d7bf2ea3e7f42a4b942d1661fad0160745062627cedb9f7e94f06c809e2fb3af",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00013-of-00016",
+      "bytes": 119776671,
+      "sha256": "ba8aafffa7d4bd741f21b1fca95ebf952b201f2b8440a8e140fab00dd82494b0",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00014-of-00016",
+      "bytes": 116903288,
+      "sha256": "6c432441521c78f87ce61e5886faa563b48869410c3d38d82b21f0de8e1a98b2",
+      "git_blob": null
+    },
+    {
+      "path": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00015-of-00016",
+      "bytes": 119276849,
+      "sha256": "d58bd00542030bf10bafe262d7e294b36f8347f70a783d83bce14ef6375b953c",
+      "git_blob": null
+    }
+  ],
+  "verified": [
+    "libero_10_no_noops/1.0.0/features.json",
+    "libero_10_no_noops/1.0.0/dataset_info.json",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00003-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00000-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00001-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00002-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00005-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00004-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00006-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00007-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00009-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00010-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00008-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00011-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00012-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00014-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00013-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00015-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00016-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00017-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00018-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00019-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00020-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00021-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00022-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00023-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00025-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00024-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00026-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00027-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00028-of-00032",
+    "libero_goal_no_noops/1.0.0/dataset_info.json",
+    "libero_goal_no_noops/1.0.0/features.json",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00029-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00030-of-00032",
+    "libero_10_no_noops/1.0.0/liber_o10-train.tfrecord-00031-of-00032",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00001-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00000-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00002-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00003-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00005-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00004-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00006-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00007-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00008-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00010-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00009-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00011-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00012-of-00016",
+    "libero_object_no_noops/1.0.0/dataset_info.json",
+    "libero_object_no_noops/1.0.0/features.json",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00014-of-00016",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00013-of-00016",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00000-of-00032",
+    "libero_goal_no_noops/1.0.0/libero_goal-train.tfrecord-00015-of-00016",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00001-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00002-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00003-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00004-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00005-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00006-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00007-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00008-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00009-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00010-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00012-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00011-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00013-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00016-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00014-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00015-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00017-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00019-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00018-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00021-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00020-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00022-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00024-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00023-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00025-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00026-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00028-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00029-of-00032",
+    "libero_spatial_no_noops/1.0.0/dataset_info.json",
+    "libero_spatial_no_noops/1.0.0/features.json",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00000-of-00016",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00027-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00031-of-00032",
+    "libero_object_no_noops/1.0.0/libero_object-train.tfrecord-00030-of-00032",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00001-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00002-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00003-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00004-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00005-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00006-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00007-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00008-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00009-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00010-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00011-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00012-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00013-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00014-of-00016",
+    "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00015-of-00016"
+  ]
+}

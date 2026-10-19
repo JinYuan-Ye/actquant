@@ -1,0 +1,46 @@
+{
+  "mode": "inspect",
+  "reference": "/workspace/actquant/reproduction/results/pi05-real-forward-01",
+  "reference_npz_sha256": "5ab69774b30852ef5ebb902fd85eca81642dcf54a2f999235da57dac59cbdf46",
+  "reference_report_sha256": "ccd72ed9d23cf4e962f0bf7a326283b215f32e8d0506e23e218f70b0c32f8533",
+  "config_sha256": "2f6d4b96b032593e1de65b391ee7252a70227bff398ef1b94658fea17818142f",
+  "action_horizon": 50,
+  "action_dim": 32,
+  "max_token_len": 200,
+  "dtype": "bfloat16",
+  "reference_input_validation": "PASS",
+  "augmentation": "disabled_for_saved_input_comparison",
+  "loss_scope": "per_element_32d; also report first7d mean; no backward",
+  "scope": "single_probe_loss_comparison_only_not_calibration_or_closed_loop",
+  "source_sha256": {
+    "/workspace/actquant/reproduction/pi05_lerobot/openpi_compare.py": "0ea6056b67aa622256d616a411db7f9f0097c8915f99ef34fec4b2ebd2e33a0e",
+    "/workspace/actquant/src/openpi/src/openpi/models_pytorch/pi0_pytorch.py": "dcd7b6f508808ce4b7170a1720a4c62c6da04edae3652d16c94a469dca924e16",
+    "/workspace/actquant/src/openpi/src/openpi/models_pytorch/gemma_pytorch.py": "225092e06509da0ae37bb9dca55c00d2804255bb1496f7c8700304b4c52a95eb",
+    "/workspace/actquant/src/openpi/src/openpi/models_pytorch/preprocessing_pytorch.py": "6a44e91be2d7a724c6140d2cc98ed0a631b8d38bbb29f63b380a0a19f903bbf6"
+  },
+  "versions": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.53.2",
+    "numpy": "1.26.4"
+  },
+  "schema_match": "PASS",
+  "source_tensor_count": 812,
+  "target_state_key_count": 813,
+  "tied_aliases_filled": [
+    [
+      "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight",
+      "paligemma_with_expert.paligemma.lm_head.weight"
+    ]
+  ],
+  "missing": [],
+  "unexpected": [],
+  "shape_mismatches": [],
+  "dtype_mismatches": [],
+  "checkpoint_header_sha256": "91e40d60ed3546b90593d90d06677cb5152587d0d9dc7501fb63f0e3e9ab3186",
+  "checkpoint_bytes": 7473096344,
+  "target_state_dtype_counts": {
+    "torch.float32": 122,
+    "torch.bfloat16": 691
+  },
+  "model_weight_storage_allocated": false
+}

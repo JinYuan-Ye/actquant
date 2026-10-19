@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "small_real_tensor_merge_fixture_not_inference_model",
+  "original_metadata_truncation_reproduced": {
+    "clip.vision.image_mean": {
+      "base": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "official_merged": [
+        0.5
+      ],
+      "compat_merged": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "clip.vision.image_std": {
+      "base": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "official_merged": [
+        0.5
+      ],
+      "compat_merged": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "compat_metadata_fields_preserved": 37,
+  "tensor_bytes_preserved": 4,
+  "norm_not_double_incremented": true,
+  "official_tensor_merge_rules_modified": false
+}

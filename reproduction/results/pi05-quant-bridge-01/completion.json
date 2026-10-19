@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "full_unquantized_exports_and_partial_tensor_quantization_not_full_quantized_inference",
+  "source_sha256": {
+    "reproduction/pi05_lerobot/check_quantization_bridge.py": "6bf3ee29065104a82aa236924299f84558ab971c9b6972b455ed6d02e00522f9",
+    "reproduction/pi05_lerobot/merge_gguf_compat.py": "49773f918c0fa5dfbb5482f2147f847f834f850b53e8de636c1c917d18a22696",
+    "src/ActQuant/tools/pi0.5/merge_pi05_llm.py": "856c71de85a646879c860c1c4e1f7f35cfe49502e5987dac5bace38e4fb744e2",
+    "build/pi05/bin/llama-quantize": "fe2534b82c481f6013ddca424d21a2167644a08a488d02b11d9a7069d9000436",
+    "build/pi05/bin/quantize-vision": "901258af354d87794ee08dcada77e88dc20fae0d4f0ca467de57706411ac03c1"
+  },
+  "evidence": [
+    "export-run.json",
+    "bridge-audit.json",
+    "metadata-merge-probe/audit.json"
+  ],
+  "fixture_directory": "selected-03"
+}

@@ -1,0 +1,40 @@
+{
+  "mode": "forward",
+  "chunk_size": 50,
+  "max_action_dim": 32,
+  "tokenizer_max_length": 200,
+  "normalization": "PASS",
+  "weights_present": true,
+  "prompt_format": "PASS",
+  "prompt": "Task: pick up the cup, State: -1 -1 -1 -1 163 211 255 255 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128;\nAction: ",
+  "action_shape": [
+    1,
+    50,
+    7
+  ],
+  "tokens_shape": [
+    1,
+    200
+  ],
+  "sample_kind": "synthetic_interface_only",
+  "calib_dir": null,
+  "index": 0,
+  "tokenizer_exact_match": "PASS",
+  "valid_tokens": 135,
+  "padding_side": "right",
+  "tokenizer_default_padding_side": "left",
+  "strict_load": "PASS",
+  "forward": "PASS",
+  "loss_shape": [
+    1,
+    50,
+    32
+  ],
+  "loss_7d": 1.5784870386123657,
+  "loss_32d": 0.41200968623161316,
+  "seed": 42,
+  "time": 0.5,
+  "dtype": "bfloat16",
+  "peak_gpu_gib": 7.116827011108398,
+  "config_sha256": "2f6d4b96b032593e1de65b391ee7252a70227bff398ef1b94658fea17818142f"
+}

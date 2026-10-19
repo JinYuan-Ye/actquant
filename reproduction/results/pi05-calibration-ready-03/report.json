@@ -1,0 +1,99 @@
+{
+  "contract": {
+    "checkpoint_route": "LeRobot with audited external input adaptation",
+    "action_horizon": 50,
+    "action_dim": 32,
+    "token_length": 200,
+    "normalization": "checkpoint MEAN_STD",
+    "loss": "original ActQuant full32 mean",
+    "float32_matmul_precision": "highest",
+    "image_augmentation": "disabled to match official LeRobot input",
+    "fisher_batch_size": 1,
+    "raw_images": "native256; official224 resize",
+    "official_statistical_and_quantization_functions_modified": false
+  },
+  "full_calibration_run": false,
+  "calib_dir": "reproduction/data/pi05-readiness-01",
+  "raw_input_matches_reference": "EXACT_MATCH",
+  "strict_load": "PASS",
+  "tied_aliases_filled": [
+    [
+      "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight",
+      "paligemma_with_expert.paligemma.lm_head.weight"
+    ]
+  ],
+  "runtime_precision": {
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+    "NVIDIA_TF32_OVERRIDE": null
+  },
+  "raw_forward_comparison": {
+    "status": "EXACT_MATCH",
+    "atol": 1e-06,
+    "rtol": 1e-05,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "elements_outside_tolerance": 0,
+    "total_elements": 1600,
+    "worst_index": [
+      0,
+      0,
+      0
+    ],
+    "max_abs_diff_7d": 0.0,
+    "max_abs_diff_padded_25d": 0.0
+  },
+  "target_matrices": {
+    "llm": 126,
+    "vision": 162
+  },
+  "activation_collection": {
+    "status": "PASS",
+    "frames": 4,
+    "X_shape": [
+      4,
+      2048
+    ],
+    "Y_shape": [
+      4,
+      350
+    ],
+    "matrices": 126,
+    "hsic_scores_computed": false
+  },
+  "backward": {
+    "status": "PASS",
+    "target_count": 288,
+    "missing": [
+      "blk.17.attn_output.weight",
+      "blk.17.ffn_gate.weight",
+      "blk.17.ffn_up.weight",
+      "blk.17.ffn_down.weight"
+    ],
+    "invalid": [],
+    "all_zero": [
+      "blk.17.attn_q.weight"
+    ],
+    "expected_unused_final_prefix": [
+      "blk.17.attn_output.weight",
+      "blk.17.ffn_down.weight",
+      "blk.17.ffn_gate.weight",
+      "blk.17.ffn_up.weight"
+    ],
+    "expected_zero_final_prefix": [
+      "blk.17.attn_q.weight"
+    ],
+    "loss_scope": "mean over full32",
+    "optimizer_steps": 0,
+    "fisher_accumulators_created": false
+  },
+  "status": "PASS",
+  "peak_gpu_gib": 11.76995325088501,
+  "duration_seconds": 32.96516362100374,
+  "adapter_sha256": "06dabc87be068df95f6e16d069a2b345638838ad928c98f1c20314bb95d04f1d",
+  "reference_sha256": "5ab69774b30852ef5ebb902fd85eca81642dcf54a2f999235da57dac59cbdf46"
+}

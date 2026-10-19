@@ -1,0 +1,79 @@
+{
+  "scope": "signed_velocity_and_four_gradients_only",
+  "loss_scope": "mean32_for_comparison",
+  "full_fisher_computed": false,
+  "runtime_precision": {
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+    "NVIDIA_TF32_OVERRIDE": null
+  },
+  "final_prefix_unused_confirmed": [
+    "paligemma_with_expert.paligemma.model.language_model.layers.17.self_attn.o_proj.weight",
+    "paligemma_with_expert.paligemma.model.language_model.layers.17.mlp.gate_proj.weight",
+    "paligemma_with_expert.paligemma.model.language_model.layers.17.mlp.up_proj.weight",
+    "paligemma_with_expert.paligemma.model.language_model.layers.17.mlp.down_proj.weight"
+  ],
+  "comparisons": {
+    "velocity": {
+      "shape": [
+        1,
+        50,
+        32
+      ],
+      "exact_match": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0
+    },
+    "loss": {
+      "shape": [
+        1,
+        50,
+        32
+      ],
+      "exact_match": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0
+    },
+    "blk.0.attn_q.weight": {
+      "shape": [
+        2048,
+        2048
+      ],
+      "exact_match": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0
+    },
+    "blk.17.attn_k.weight": {
+      "shape": [
+        256,
+        2048
+      ],
+      "exact_match": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0
+    },
+    "blk.17.attn_q.weight": {
+      "shape": [
+        2048,
+        2048
+      ],
+      "exact_match": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0
+    },
+    "v.blk.0.attn_q.weight": {
+      "shape": [
+        1152,
+        1152
+      ],
+      "exact_match": true,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0
+    }
+  },
+  "status": "EXACT_MATCH",
+  "peak_gpu_gib": 11.769405364990234
+}

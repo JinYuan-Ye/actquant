@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "seconds": 5.345753850007895,
+  "command": [
+    "/workspace/actquant/reproduction/results/pi05-cpp-build-04/cpp-forward-probe",
+    "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/unified/pi05.gguf",
+    "/workspace/actquant/models/paligemma_tokenizer/tokenizer.model",
+    "/workspace/actquant/reproduction/results/pi05-cpp-reference-01",
+    "/workspace/actquant/reproduction/results/pi05-cpp-forward-06"
+  ],
+  "precision": "FP16 export; GGML_PREC_F32; TF32 disabled; source BF16-rounded RoPE frequency matched via public factors input",
+  "scope": "fixed sample source-buffer compatibility diagnostic"
+}

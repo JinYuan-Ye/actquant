@@ -1,0 +1,22 @@
+{
+  "scope": "export_precision_and_compacted_valid_prefix_reference_not_original_bf16_baseline",
+  "strict_load": "PASS",
+  "aliases": [
+    [
+      "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight",
+      "paligemma_with_expert.paligemma.lm_head.weight"
+    ]
+  ],
+  "sample": "/workspace/actquant/reproduction/results/pi05-real-forward-01",
+  "dtype": "FP32 compute; rank>=2 weights rounded through FP16",
+  "mask_compaction": "omit masked image and right-padded text tokens; keep valid token order",
+  "original_reference_loss": "EXACT_MATCH",
+  "valid_text_tokens": 151,
+  "valid_prefix_tokens": 663,
+  "compaction_max_abs_diff": 2.6226043701171875e-06,
+  "compaction_mean_abs_diff": 1.6945297431902873e-07,
+  "compaction_strict_allclose": true,
+  "duration_seconds": 35.56606857501902,
+  "peak_gpu_gib": 16.443460941314697,
+  "status": "PASS"
+}

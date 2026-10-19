@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "seconds": 5.234005247999448,
+  "command": [
+    "/workspace/actquant/reproduction/results/pi05-cpp-build-01/cpp-forward-probe",
+    "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/unified/pi05.gguf",
+    "/workspace/actquant/models/paligemma_tokenizer/tokenizer.model",
+    "/workspace/actquant/reproduction/results/pi05-cpp-reference-01",
+    "/workspace/actquant/reproduction/results/pi05-cpp-forward-01"
+  ],
+  "scope": "fixed-noise-time single-sample C++ diagnostic, no closed loop"
+}

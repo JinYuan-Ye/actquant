@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "diagnostic F32 storage of exactly the exported F16 values; original export unchanged",
+  "source": "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/unified/pi05.gguf",
+  "converted_tensors": 459,
+  "total_tensors": 814,
+  "bytes": 13425726784,
+  "seconds": 9.540556096995715
+}

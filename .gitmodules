@@ -1,0 +1,6 @@
+[submodule "src/openpi"]
+	path = src/openpi
+	url = https://github.com/Physical-Intelligence/openpi.git
+[submodule "src/lerobot-v044"]
+	path = src/lerobot-v044
+	url = https://github.com/huggingface/lerobot.git

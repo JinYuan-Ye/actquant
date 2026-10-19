@@ -1,0 +1,27 @@
+{
+  "mode": "preprocess",
+  "chunk_size": 50,
+  "max_action_dim": 32,
+  "tokenizer_max_length": 200,
+  "normalization": "PASS",
+  "weights_present": true,
+  "prompt_format": "PASS",
+  "prompt": "Task: pick up the black bowl next to the cookie box and place it on the plate, State: -1 90 255 190 159 142 235 22 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128 128;\nAction: ",
+  "action_shape": [
+    1,
+    50,
+    7
+  ],
+  "tokens_shape": [
+    1,
+    200
+  ],
+  "sample_kind": "raw_calibration",
+  "calib_dir": "reproduction/data/pi05-real-probe-01",
+  "index": 0,
+  "tokenizer_exact_match": "PASS",
+  "valid_tokens": 151,
+  "padding_side": "right",
+  "tokenizer_default_padding_side": "left",
+  "config_sha256": "2f6d4b96b032593e1de65b391ee7252a70227bff398ef1b94658fea17818142f"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "command": [
+    "/workspace/actquant/envs/openpi-server/bin/python",
+    "/workspace/actquant/src/ActQuant/tools/hsic/allocate_pi05.py",
+    "--scores",
+    "/workspace/actquant/reproduction/results/pi05-hsic-demo-01/scores.json",
+    "--score-key",
+    "F_out",
+    "--target-bpw",
+    "2.324570105820106",
+    "--base-type",
+    "IQ2_XS",
+    "--max-type",
+    "Q4_K",
+    "--output",
+    "/workspace/actquant/reproduction/results/pi05-allocation-demo-01/allocation-matched-budget.json"
+  ],
+  "target_bpw": 2.324570105820106,
+  "achieved_bpw": 2.324570105820106,
+  "heuristic_bpw": 2.324570105820106,
+  "proxy_objective": 2.639240732649111,
+  "heuristic_proxy_objective": 45.72979730002943,
+  "format_counts": {
+    "Q4_K": 4,
+    "IQ2_XS": 95,
+    "IQ3_S": 8,
+    "IQ4_XS": 13,
+    "Q2_K": 3,
+    "IQ3_XXS": 2,
+    "IQ2_S": 1
+  },
+  "upgraded_from_base": 31,
+  "scope": "same_budget_proxy_comparison_only_not_measured_model_quality",
+  "upstream_driver_note": "IQ2_XS target constant 2.3471 differs from actual allocator heuristic weighted bpw 2.324570105820106; preserved official code unchanged"
+}

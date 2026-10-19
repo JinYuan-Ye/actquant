@@ -1,0 +1,7 @@
+{
+  "status": "INTERRUPTED",
+  "phase": "finite-value scan after target-value comparisons",
+  "reason": "replace slow FP16 isfinite/assert scans with raw bit operations; retried in selected-03",
+  "preserved_directory": "selected-02",
+  "model_weights_modified": false
+}

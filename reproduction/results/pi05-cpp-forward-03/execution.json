@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "seconds": 5.552151219977532,
+  "command": [
+    "/workspace/actquant/reproduction/results/pi05-cpp-build-02/cpp-forward-probe",
+    "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/unified/pi05.gguf",
+    "/workspace/actquant/models/paligemma_tokenizer/tokenizer.model",
+    "/workspace/actquant/reproduction/results/pi05-cpp-reference-01",
+    "/workspace/actquant/reproduction/results/pi05-cpp-forward-03"
+  ],
+  "precision": "GGML_PREC_F32 plus NVIDIA_TF32_OVERRIDE=0",
+  "scope": "single fixed-input diagnostic"
+}

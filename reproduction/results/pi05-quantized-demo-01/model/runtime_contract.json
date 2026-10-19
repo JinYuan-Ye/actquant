@@ -1,0 +1,10 @@
+{
+  "calibration": "four frames from one episode; teaching run",
+  "validated_runtime": "external fixed-input CUDA probe; matched_rope mode; 10-step paired inference",
+  "valid_prefix_contract": "official state-bearing prompt; two real images; compact masked image/text padding",
+  "ro_pe": "load source BF16-rounded frequencies from rope_inv_freq.f32",
+  "backend_precision": "GGML_PREC_F32 request; NVIDIA_TF32_OVERRIDE=0",
+  "cross_backend_strict_status": "NUMERICAL_MISMATCH retained",
+  "task_success": "not evaluated",
+  "original_serve_policy_validated": false
+}

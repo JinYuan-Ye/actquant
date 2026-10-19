@@ -1,0 +1,65 @@
+{
+  "stage": "hsic",
+  "contract": {
+    "checkpoint_route": "LeRobot with audited external input adaptation",
+    "action_horizon": 50,
+    "action_dim": 32,
+    "token_length": 200,
+    "normalization": "checkpoint MEAN_STD",
+    "loss": "original ActQuant full32 mean",
+    "float32_matmul_precision": "highest",
+    "image_augmentation": "disabled to match official LeRobot input",
+    "fisher_batch_size": 1,
+    "raw_images": "native256; official224 resize",
+    "official_statistical_and_quantization_functions_modified": false
+  },
+  "batch_size": 1,
+  "num_samples": 4,
+  "data_metadata": {
+    "total_frames": 4,
+    "image_mode": "native",
+    "camera_order": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "action_horizon": 50,
+    "source_shard": "libero_spatial_no_noops/1.0.0/libero_spatial-train.tfrecord-00000-of-00016",
+    "shard_sha256": "6d6360559a4b71df3bcabd9b55a75451f04375449ca5267616cbc1c21528eac5",
+    "episode": 0,
+    "source_frames": [
+      0,
+      10,
+      20,
+      30
+    ],
+    "action_tail_padding": false,
+    "sample_kind": "readiness_only_not_paper_calibration_split"
+  },
+  "seed": 42,
+  "checkpoint": "/workspace/actquant/models/pi05_libero",
+  "calib_dir": "/workspace/actquant/reproduction/data/pi05-readiness-01",
+  "source_sha256": {
+    "/workspace/actquant/src/ActQuant/tools/fisher-diag/compute_fisher_pi05.py": "2bffc920bc88ccb3cad18ab8c053e1b54e09826502d8311ba42e0219154d07d5",
+    "/workspace/actquant/src/ActQuant/tools/hsic/compute_hsic_pi05.py": "8116af0d0d8baa28a9d5611a8b95597b650be7c263ce6455f0a495f2a5ec9320"
+  },
+  "strict_load": "PASS",
+  "tied_aliases": [
+    [
+      "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight",
+      "paligemma_with_expert.paligemma.lm_head.weight"
+    ]
+  ],
+  "runtime_precision": {
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+    "NVIDIA_TF32_OVERRIDE": null
+  },
+  "matrices": 126,
+  "status": "PASS",
+  "duration_seconds": 35.90909394202754,
+  "peak_gpu_gib": 7.115710258483887
+}

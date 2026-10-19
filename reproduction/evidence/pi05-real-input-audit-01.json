@@ -1,0 +1,34 @@
+{
+  "source_episode_frames": 110,
+  "raw_images_shape": [
+    1,
+    3,
+    256,
+    256,
+    3
+  ],
+  "legacy_export_matches_source_PIL_path": true,
+  "state_actions_unchanged_in_native_mode": true,
+  "image_resize_comparison": {
+    "base": {
+      "mean_abs_diff_in_model_minus1_plus1_range": 0.0033696205355226994,
+      "max_abs_diff": 0.1455368995666504
+    },
+    "wrist": {
+      "mean_abs_diff_in_model_minus1_plus1_range": 0.0037006253842264414,
+      "max_abs_diff": 0.16774708032608032
+    }
+  },
+  "normalized_state": [
+    -1.5089575052261353,
+    -0.29315218329429626,
+    1.0834540128707886,
+    0.48631545901298523,
+    0.24324898421764374,
+    0.11543447524309158,
+    0.8374711871147156,
+    -0.8250251412391663
+  ],
+  "full_model_instantiated": false,
+  "note": "CPU image preprocessing audit only; no forward or inference. Source/training dataset numerical equivalence remains unverified."
+}

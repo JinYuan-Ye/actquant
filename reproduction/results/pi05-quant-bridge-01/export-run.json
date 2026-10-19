@@ -1,0 +1,38 @@
+{
+  "scope": "full_unquantized_export_then_selected_tensor_quantization_only",
+  "checkpoint_route": "pinned LeRobot checkpoint",
+  "output_precision_request": "fp16",
+  "commands": [
+    {
+      "stage": "unified",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "/workspace/actquant/src/ActQuant/tools/pi0.5/export_pi05.py",
+        "-d",
+        "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/checkpoint-view",
+        "-o",
+        "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/unified"
+      ],
+      "returncode": 0,
+      "seconds": 11.895095302024856
+    },
+    {
+      "stage": "llm",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "/workspace/actquant/src/ActQuant/tools/pi0.5/export_pi05_llm.py",
+        "-d",
+        "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/checkpoint-view",
+        "-o",
+        "/workspace/actquant/reproduction/results/pi05-quant-bridge-01/llm"
+      ],
+      "returncode": 0,
+      "seconds": 4.532253137032967
+    }
+  ],
+  "source_sha256": {
+    "src/ActQuant/tools/pi0.5/export_pi05.py": "453955676a2109659ca1207ec7867fa19c787542dc9de3553fc2831ead350a43",
+    "src/ActQuant/tools/pi0.5/export_pi05_llm.py": "0062b72f22aeb499ca43eaf2a323a3537636f39cabdc0dceb37d6e7812270ec1"
+  },
+  "status": "PASS"
+}

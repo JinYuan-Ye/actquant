@@ -1,0 +1,6 @@
+{
+  "source": "pinned Gemma constructor casts registered inv_freq buffer to BF16; reconstructed exactly from CPU initialization formula",
+  "dtype_before_float": "bfloat16",
+  "elements": 128,
+  "max_phase_difference_at_663": 0.920371413230896
+}

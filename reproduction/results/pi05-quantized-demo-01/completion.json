@@ -1,0 +1,21 @@
+{
+  "status": "ARTIFACT_AND_PAIRED_EXECUTION_PASS",
+  "quality_acceptance": "NOT_EVALUATED",
+  "calibration_samples": 4,
+  "quantized_llm_matrices": 126,
+  "model_sha256": "25d52c5e7a54608b604b15322ad09fa0b0502209bd988b45c313f54f8528b41e",
+  "source_sha256": {
+    "reproduction/pi05_lerobot/quantize_llm.py": "2aeae548184df672fe07bef0515d6227fd150212bbb573a31bd7f484140d13c3",
+    "reproduction/pi05_lerobot/finish_llm_quantization.py": "86d564d87e8d1997ef8fdb98d1bd1416caeea9a00015b764189bebc1b6b49d40",
+    "reproduction/pi05_lerobot/measure_quantization_effect.py": "22fafeb3fd4e9fae72b20fded9eb74c3b0799b7f73cafe384f86a58c60084810",
+    "reproduction/pi05_lerobot/run_cpp_probe.py": "c20367374a32401c44b012e738656a798ee60d159d3de2bbd54e61addd808707",
+    "reproduction/pi05_lerobot/cpp_forward_probe.cpp": "e5603cb5a80200f3a08b33818d8b68423b539996c6b2033c3216b990e0259490",
+    "reproduction/pi05_lerobot/merge_gguf_compat.py": "49773f918c0fa5dfbb5482f2147f847f834f850b53e8de636c1c917d18a22696"
+  },
+  "evidence": [
+    "artifact-audit.json",
+    "paired-validation.json"
+  ],
+  "cross_backend_report": "retained NUMERICAL_MISMATCH; thresholds unchanged",
+  "reproduction_command_dry_run_matches_executed": true
+}

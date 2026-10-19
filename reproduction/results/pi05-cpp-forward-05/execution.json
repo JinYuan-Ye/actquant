@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "returncode": 0,
+  "seconds": 10.033368611999322,
+  "command": [
+    "/workspace/actquant/reproduction/results/pi05-cpp-build-02/cpp-forward-probe",
+    "/workspace/actquant/reproduction/results/pi05-cpp-f32-weights-01/pi05.gguf",
+    "/workspace/actquant/models/paligemma_tokenizer/tokenizer.model",
+    "/workspace/actquant/reproduction/results/pi05-cpp-reference-01",
+    "/workspace/actquant/reproduction/results/pi05-cpp-forward-05"
+  ],
+  "precision": "F32 storage of exported values; GGML_PREC_F32; TF32 disabled",
+  "scope": "isolate F16 dispatch without altering original exported weights"
+}

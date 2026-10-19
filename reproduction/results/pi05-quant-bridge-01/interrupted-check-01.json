@@ -1,0 +1,7 @@
+{
+  "status": "INTERRUPTED",
+  "phase": "read-only exported target equality scan",
+  "reason": "CPU thread oversubscription; retried with four CPU threads in selected-02",
+  "preserved_directory": "selected",
+  "model_weights_modified": false
+}

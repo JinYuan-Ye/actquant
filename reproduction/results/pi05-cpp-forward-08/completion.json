@@ -1,0 +1,16 @@
+{
+  "status": "NUMERICAL_MISMATCH",
+  "execution_succeeded": true,
+  "strict_threshold_changed": false,
+  "source_sha256": {
+    "reproduction/pi05_lerobot/prepare_cpp_reference.py": "c7f94e71d9929af93be76caa7de7c8c8519a634ea54b57ae6d7f63abad2ec7f1",
+    "reproduction/pi05_lerobot/compare_cpp_forward.py": "24907b76fd947cdb4544a0ade8abf402cc6ac45fa0eeb94ad8c4be438665f6bf",
+    "reproduction/pi05_lerobot/run_cpp_probe.py": "dbff6e3a68692d8f770f9db152a404c65585daac80641a2648fe7a375a304667",
+    "reproduction/pi05_lerobot/cpp_forward_probe.cpp": "9ff762f0396cb523809d845592588555b86bc0d135bc9ba74aa709e62c187657"
+  },
+  "evidence": [
+    "run.json",
+    "outputs/comparison.json"
+  ],
+  "production_policy_validated": false
+}

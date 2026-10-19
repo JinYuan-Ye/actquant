@@ -1,0 +1,17 @@
+{
+  "ActQuant": {
+    "url": "https://github.com/arashakb/ActQuant.git",
+    "revision": "b64791125070652fe6b554e244fe809c79ef5246",
+    "strategy": "vendored_tracked_snapshot"
+  },
+  "openpi": {
+    "url": "https://github.com/Physical-Intelligence/openpi.git",
+    "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "strategy": "pinned_git_submodule"
+  },
+  "lerobot-v044": {
+    "url": "https://github.com/huggingface/lerobot.git",
+    "revision": "8fff0fde7c79f23a93d845d1a50e985de01f8b8a",
+    "strategy": "pinned_git_submodule"
+  }
+}

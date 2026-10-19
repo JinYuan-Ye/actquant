@@ -1,0 +1,152 @@
+{
+  "status": "RUNNING",
+  "stages": {
+    "export": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/export_native_calibration.py",
+        "--data-dir",
+        "/workspace/actquant/data/libero_probe_rlds",
+        "--output",
+        "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+        "--sparse-placeholder-camera"
+      ],
+      "started_utc": "2026-10-19T15:09:48Z",
+      "pid": 39250,
+      "seconds": 33.931115710991435,
+      "returncode": 0
+    },
+    "data_audit": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/audit_full_calibration.py",
+        "--calib-dir",
+        "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/data-audit.json"
+      ],
+      "started_utc": "2026-10-19T15:10:22Z",
+      "pid": 39333,
+      "returncode": 0,
+      "seconds": 4.279472207010258
+    },
+    "hsic": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/run_calibration.py",
+        "--stage",
+        "hsic",
+        "--calib-dir",
+        "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+        "--num-samples",
+        "11777",
+        "--use-gpu-hsic",
+        "--no-activation-cache",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/hsic"
+      ],
+      "started_utc": "2026-10-19T15:10:26Z",
+      "pid": 39460,
+      "seconds": 1002.3814846210298,
+      "returncode": 0
+    },
+    "allocation": {
+      "status": "PASS",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "/workspace/actquant/src/ActQuant/tools/hsic/allocate_pi05.py",
+        "--scores",
+        "/workspace/actquant/reproduction/results/pi05-full-01/hsic/scores.json",
+        "--score-key",
+        "F_out",
+        "--target-bpw",
+        "2.3471",
+        "--base-type",
+        "IQ2_XS",
+        "--max-type",
+        "Q4_K",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/allocation.json"
+      ],
+      "started_utc": "2026-10-19T15:27:09Z",
+      "pid": 41056,
+      "returncode": 0,
+      "seconds": 0.21435719198780134
+    },
+    "fisher": {
+      "status": "RUNNING",
+      "command": [
+        "/workspace/actquant/envs/openpi-server/bin/python",
+        "-u",
+        "/workspace/actquant/reproduction/pi05_lerobot/run_calibration.py",
+        "--stage",
+        "fisher",
+        "--calib-dir",
+        "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+        "--num-samples",
+        "11777",
+        "--output",
+        "/workspace/actquant/reproduction/results/pi05-full-01/fisher",
+        "--checkpoint-every",
+        "200"
+      ],
+      "started_utc": "2026-10-19T15:27:09Z",
+      "pid": 41120,
+      "seconds": 650.0967944710283
+    }
+  },
+  "scope": "60 episodes, every selected frame; all126 LLM targets",
+  "seed": 42,
+  "pid": 39092,
+  "runner_sha256": "1cabbaf5f78e9982366d0557144b36e669f7fd21a8d060a11c4c71fec9ef99c2",
+  "authorized_scope": "User explicitly requested full calibration-set quantization",
+  "calib_dir": "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+  "phase": "fisher",
+  "calibration_frames": 11777,
+  "calibration_episodes": 60,
+  "suites": [
+    {
+      "suite": "spatial",
+      "episodes": 10,
+      "tasks": 10,
+      "frames": 1216
+    },
+    {
+      "suite": "object",
+      "episodes": 10,
+      "tasks": 10,
+      "frames": 1388
+    },
+    {
+      "suite": "goal",
+      "episodes": 10,
+      "tasks": 10,
+      "frames": 1208
+    },
+    {
+      "suite": "long",
+      "episodes": 30,
+      "tasks": 10,
+      "frames": 7965
+    }
+  ],
+  "allocation": {
+    "target_bpw": 2.3471,
+    "achieved_bpw": 2.3470734126984127,
+    "format_counts": {
+      "Q4_K": 29,
+      "IQ2_S": 18,
+      "Q2_K": 6,
+      "IQ2_XS": 65,
+      "IQ3_S": 2,
+      "IQ3_XXS": 5,
+      "IQ4_XS": 1
+    }
+  }
+}

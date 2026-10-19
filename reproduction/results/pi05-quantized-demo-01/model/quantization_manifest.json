@@ -1,0 +1,38 @@
+{
+  "status": "ARTIFACT_PASS",
+  "scope": "complete_pi05_container_with_all126_LLM_weights_quantized",
+  "calibration_samples": 4,
+  "calibration_limit": "four frames from one episode; not full paper calibration",
+  "quality_status": "requires_same_backend_forward_and_closed_loop_evaluation",
+  "per_weight_fisher_log_count": 126,
+  "quantized_llm_matrices": 126,
+  "unchanged_tensors": 688,
+  "total_tensors": 814,
+  "metadata_fields_preserved": 37,
+  "actual_block_bpw": 2.347089947089947,
+  "encoded_block_bytes": 581435392,
+  "format_counts": {
+    "Q4_K": 25,
+    "IQ2_S": 21,
+    "IQ2_XS": 67,
+    "Q2_K": 4,
+    "IQ3_S": 2,
+    "IQ4_XS": 4,
+    "IQ3_XXS": 3
+  },
+  "base_gguf_bytes": 6714075456,
+  "quantized_gguf_bytes": 3331893600,
+  "size_ratio_base_over_quantized": 2.0150929957667314,
+  "size_reduction_fraction": 0.5037449874021791,
+  "model_dir": "/workspace/actquant/reproduction/results/pi05-quantized-demo-01/model",
+  "unchanged_components": [
+    "vision",
+    "embedding",
+    "action_expert",
+    "projector",
+    "norms",
+    "normalization_stats"
+  ],
+  "cross_backend_strict_result": "prior numerical mismatch retained, not relabeled PASS",
+  "seconds": 13.869150111975614
+}

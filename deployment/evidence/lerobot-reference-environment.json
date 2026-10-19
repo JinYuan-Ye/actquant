@@ -1,0 +1,18 @@
+{
+  "versions": {
+    "lerobot": "0.4.4",
+    "torch": "2.7.1+cu126",
+    "torchvision": "0.22.1+cu126",
+    "torchcodec": "0.4.0+cu126",
+    "numpy": "2.2.6",
+    "scipy": "1.14.1",
+    "transformers": "4.53.3",
+    "safetensors": "0.5.3",
+    "sentencepiece": "0.2.0"
+  },
+  "gpu": "NVIDIA L40S",
+  "cuda_available": true,
+  "official_transformers_patch": true,
+  "model_instantiated": false,
+  "model_forward_executed": false
+}

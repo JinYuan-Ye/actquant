@@ -1,0 +1,33 @@
+{
+  "finding": "Different FP32 matmul policy reproduced using storage-free meta constructors",
+  "lerobot_meta": {
+    "compile_model": false,
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "openpi_meta": {
+    "compile_mode": null,
+    "float32_matmul_precision": "high",
+    "cuda_matmul_allow_tf32": true,
+    "cudnn_allow_tf32": true
+  },
+  "transformers_patch_comparison": {
+    "gemma": {
+      "equal_ignoring_trailing_newline": true,
+      "normalized_sha256": "236196720ba5446704cc95a221aa43dd217e39afd72d92496f6307b1cd13a18a"
+    },
+    "siglip": {
+      "equal_ignoring_trailing_newline": true,
+      "normalized_sha256": "ef2e99500f263fdd78db9d4d9a255e29d844eb92f53c25ad640f8056700ef84b"
+    },
+    "paligemma": {
+      "equal_ignoring_trailing_newline": true,
+      "normalized_sha256": "b72b421de47b58662f9fc3f663100a333d31913d2d55a0a93a26fb364cf0657b"
+    }
+  },
+  "historical_runs_recorded_precision": false,
+  "causality_status": "candidate cause; highest rerun not yet executed",
+  "next_run": "Same checkpoint, saved inputs, noise, time and tolerances; explicitly set highest AFTER OpenPI model construction",
+  "model_forward_executed_by_assistant": false
+}

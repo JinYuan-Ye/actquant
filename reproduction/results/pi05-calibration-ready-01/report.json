@@ -1,0 +1,19 @@
+{
+  "contract": {
+    "checkpoint_route": "LeRobot with audited external input adaptation",
+    "action_horizon": 50,
+    "action_dim": 32,
+    "token_length": 200,
+    "normalization": "checkpoint MEAN_STD",
+    "loss": "original ActQuant full32 mean",
+    "float32_matmul_precision": "highest",
+    "image_augmentation": "disabled to match official LeRobot input",
+    "fisher_batch_size": 1,
+    "raw_images": "native256; official224 resize",
+    "official_statistical_and_quantization_functions_modified": false
+  },
+  "full_calibration_run": false,
+  "status": "FAIL",
+  "error": "RuntimeError('permute(sparse_coo): number of dimensions in the tensor input does not match the length of the desired ordering of dimensions i.e. input.dim() = 3 is not equal to len(dims) = 4')",
+  "duration_seconds": 0.8437670050188899
+}

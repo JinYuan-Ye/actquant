@@ -1,0 +1,119 @@
+{
+  "status": "PAIRED_EXECUTION_PASS",
+  "quality_acceptance": "NOT_EVALUATED",
+  "scope": "one real observation; fixed seed-noise; paired C++ ten-step inference, no environment execution",
+  "same_runtime_source": "e5603cb5a80200f3a08b33818d8b68423b539996c6b2033c3216b990e0259490",
+  "same_environment": {
+    "ACTQUANT_PROBE_F32": "1",
+    "ACTQUANT_PROBE_MATCH_ROPE": "1",
+    "NVIDIA_TF32_OVERRIDE": "0",
+    "ACTQUANT_PROBE_ODE_STEPS": "10"
+  },
+  "fixed_velocity_mean32": {
+    "max_abs_diff": 0.8809655904769897,
+    "mean_abs_diff": 0.040274944741977375,
+    "rmse": 0.10616554630281116,
+    "relative_l2": 0.11760452347593556
+  },
+  "sampled_actions_normalized_32d": {
+    "max_abs_diff": 0.5240360498428345,
+    "mean_abs_diff": 0.021259474277248957,
+    "rmse": 0.059747447061511375,
+    "relative_l2": 0.12385801129771062
+  },
+  "sampled_actions_normalized_7d": {
+    "max_abs_diff": 0.5240360498428345,
+    "mean_abs_diff": 0.08255286616406271,
+    "rmse": 0.1273507260187028,
+    "relative_l2": 0.12666822378961134
+  },
+  "sampled_actions_denormalized_7d": {
+    "max_abs_diff": 0.17582653248522584,
+    "mean_abs_diff": 0.015780740588992998,
+    "rmse": 0.028695044491132044,
+    "relative_l2": 0.05720907965518189
+  },
+  "ode_step_normalized_7d": [
+    {
+      "max_abs_diff": 0.04798738658428192,
+      "mean_abs_diff": 0.008427127785980702,
+      "rmse": 0.012455053764685914,
+      "relative_l2": 0.014217522226929862
+    },
+    {
+      "max_abs_diff": 0.09800663590431213,
+      "mean_abs_diff": 0.016748274112386365,
+      "rmse": 0.024793055025294736,
+      "relative_l2": 0.0310105821779698
+    },
+    {
+      "max_abs_diff": 0.14934557676315308,
+      "mean_abs_diff": 0.02500764125691993,
+      "rmse": 0.037104071407478574,
+      "relative_l2": 0.05001845792778871
+    },
+    {
+      "max_abs_diff": 0.1991196870803833,
+      "mean_abs_diff": 0.033075399643608505,
+      "rmse": 0.0491222751320728,
+      "relative_l2": 0.06942613612590672
+    },
+    {
+      "max_abs_diff": 0.24945098161697388,
+      "mean_abs_diff": 0.04109014771080443,
+      "rmse": 0.06113836847936085,
+      "relative_l2": 0.08731875899017597
+    },
+    {
+      "max_abs_diff": 0.29730212688446045,
+      "mean_abs_diff": 0.04907309943810105,
+      "rmse": 0.07303560181285054,
+      "relative_l2": 0.10143223504780502
+    },
+    {
+      "max_abs_diff": 0.34597623348236084,
+      "mean_abs_diff": 0.05693945783323475,
+      "rmse": 0.08502556220380109,
+      "relative_l2": 0.11126504493274304
+    },
+    {
+      "max_abs_diff": 0.3919076919555664,
+      "mean_abs_diff": 0.06501175957864949,
+      "rmse": 0.09737748068411207,
+      "relative_l2": 0.11745109912298939
+    },
+    {
+      "max_abs_diff": 0.4429212808609009,
+      "mean_abs_diff": 0.07362859104893037,
+      "rmse": 0.1111143627749482,
+      "relative_l2": 0.12208966841059114
+    },
+    {
+      "max_abs_diff": 0.5240360498428345,
+      "mean_abs_diff": 0.08255286616406271,
+      "rmse": 0.1273507260187028,
+      "relative_l2": 0.12666822378961134
+    }
+  ],
+  "baseline_first_action": [
+    0.16988991345484222,
+    0.006575328492195373,
+    0.007320851706117057,
+    -0.0029163162404841052,
+    -0.050952734742861536,
+    -0.0038092196701553054,
+    -1.0008210412099723
+  ],
+  "quantized_first_action": [
+    0.19455998986750123,
+    0.00337401075738121,
+    0.01357502424312429,
+    -0.0028611310719502086,
+    -0.04549219363426683,
+    -0.00380080208308248,
+    -1.0016532273101744
+  ],
+  "previous_cross_backend_strict_status": "NUMERICAL_MISMATCH retained; no tolerance changes",
+  "baseline_probe": "/workspace/actquant/reproduction/results/pi05-quant-baseline-01",
+  "quantized_probe": "/workspace/actquant/reproduction/results/pi05-quantized-forward-01"
+}

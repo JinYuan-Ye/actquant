@@ -1,0 +1,79 @@
+{
+  "scope": "diagnostic_measurements_not_blanket_numerical_equivalence",
+  "comparisons": {
+    "image0": {
+      "elements": 524288,
+      "max_abs_diff": 0.970550537109375,
+      "mean_abs_diff": 0.0038050363215997862,
+      "rmse": 0.00915544358297123,
+      "relative_l2": 0.0015469737444385625,
+      "cosine": 0.9999988039022748,
+      "strict_allclose": false
+    },
+    "image1": {
+      "elements": 524288,
+      "max_abs_diff": 0.954864501953125,
+      "mean_abs_diff": 0.0036586916783170054,
+      "rmse": 0.008544724644092384,
+      "relative_l2": 0.0015876343139327586,
+      "cosine": 0.9999987400572277,
+      "strict_allclose": false
+    },
+    "text": {
+      "elements": 309248,
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "rmse": 0.0,
+      "relative_l2": 0.0,
+      "cosine": 1.0,
+      "strict_allclose": true
+    },
+    "time_embedding": {
+      "elements": 1024,
+      "max_abs_diff": 8.581113070249557e-05,
+      "mean_abs_diff": 3.747070991188339e-06,
+      "rmse": 8.90213150202574e-06,
+      "relative_l2": 1.258951510646568e-05,
+      "cosine": 0.9999999999207521,
+      "strict_allclose": false
+    },
+    "expert_same_prefix": {
+      "elements": 1600,
+      "max_abs_diff": 0.02062845230102539,
+      "mean_abs_diff": 0.0015166488257818856,
+      "rmse": 0.0027850836943737953,
+      "relative_l2": 0.003085166772092377,
+      "cosine": 0.9999952530404592,
+      "strict_allclose": false
+    },
+    "full_cpp_prefix": {
+      "elements": 1600,
+      "max_abs_diff": 0.02229452133178711,
+      "mean_abs_diff": 0.0015115582599537448,
+      "rmse": 0.0028055503859425505,
+      "relative_l2": 0.0031078386784663737,
+      "cosine": 0.9999952059824561,
+      "strict_allclose": false
+    },
+    "cached_cpp_prefix": {
+      "elements": 1600,
+      "max_abs_diff": 0.02229452133178711,
+      "mean_abs_diff": 0.0014787501882528886,
+      "rmse": 0.002739133466455009,
+      "relative_l2": 0.0030342655669934097,
+      "cosine": 0.9999954354465103,
+      "strict_allclose": false
+    }
+  },
+  "cached_vs_joint": {
+    "elements": 1600,
+    "max_abs_diff": 0.01220703125,
+    "mean_abs_diff": 0.0008199022326152771,
+    "rmse": 0.0013345965229947195,
+    "relative_l2": 0.001478794806438485,
+    "cosine": 0.9999989066495889,
+    "strict_allclose": false
+  },
+  "raw_prompt_token_ids_match": true,
+  "numerical_status": "MISMATCH"
+}
