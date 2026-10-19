@@ -1,0 +1,572 @@
+{
+  "status": "RUNNING",
+  "stage": "fisher",
+  "contract": {
+    "checkpoint_route": "LeRobot with audited external input adaptation",
+    "action_horizon": 50,
+    "action_dim": 32,
+    "token_length": 200,
+    "normalization": "checkpoint MEAN_STD",
+    "loss": "original ActQuant full32 mean",
+    "float32_matmul_precision": "highest",
+    "image_augmentation": "disabled to match official LeRobot input",
+    "fisher_batch_size": 1,
+    "raw_images": "native256; official224 resize",
+    "official_statistical_and_quantization_functions_modified": false
+  },
+  "batch_size": 1,
+  "num_samples": 11777,
+  "data_metadata": {
+    "total_frames": 11777,
+    "action_horizon": 50,
+    "image_size": 256,
+    "state_dim": 8,
+    "action_dim": 7,
+    "n_cameras": 3,
+    "camera_order": [
+      "base_0_rgb",
+      "left_wrist_0_rgb",
+      "right_wrist_0_rgb"
+    ],
+    "right_wrist_is_zeros": true,
+    "seed": 42,
+    "data_dir": "/workspace/actquant/data/libero_probe_rlds",
+    "suites": [
+      {
+        "suite": "spatial",
+        "dataset": "libero_spatial_no_noops",
+        "num_episodes": 10,
+        "num_frames": 1216,
+        "episodes": [
+          {
+            "task": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+            "num_frames": 127
+          },
+          {
+            "task": "pick up the black bowl on the ramekin and place it on the plate",
+            "num_frames": 123
+          },
+          {
+            "task": "pick up the black bowl on the wooden cabinet and place it on the plate",
+            "num_frames": 142
+          },
+          {
+            "task": "pick up the black bowl from table center and place it on the plate",
+            "num_frames": 106
+          },
+          {
+            "task": "pick up the black bowl on the cookie box and place it on the plate",
+            "num_frames": 111
+          },
+          {
+            "task": "pick up the black bowl next to the ramekin and place it on the plate",
+            "num_frames": 137
+          },
+          {
+            "task": "pick up the black bowl next to the cookie box and place it on the plate",
+            "num_frames": 125
+          },
+          {
+            "task": "pick up the black bowl next to the plate and place it on the plate",
+            "num_frames": 114
+          },
+          {
+            "task": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+            "num_frames": 91
+          },
+          {
+            "task": "pick up the black bowl on the stove and place it on the plate",
+            "num_frames": 140
+          }
+        ]
+      },
+      {
+        "suite": "object",
+        "dataset": "libero_object_no_noops",
+        "num_episodes": 10,
+        "num_frames": 1388,
+        "episodes": [
+          {
+            "task": "pick up the butter and place it in the basket",
+            "num_frames": 156
+          },
+          {
+            "task": "pick up the bbq sauce and place it in the basket",
+            "num_frames": 132
+          },
+          {
+            "task": "pick up the orange juice and place it in the basket",
+            "num_frames": 135
+          },
+          {
+            "task": "pick up the salad dressing and place it in the basket",
+            "num_frames": 122
+          },
+          {
+            "task": "pick up the milk and place it in the basket",
+            "num_frames": 138
+          },
+          {
+            "task": "pick up the ketchup and place it in the basket",
+            "num_frames": 148
+          },
+          {
+            "task": "pick up the cream cheese and place it in the basket",
+            "num_frames": 126
+          },
+          {
+            "task": "pick up the tomato sauce and place it in the basket",
+            "num_frames": 136
+          },
+          {
+            "task": "pick up the alphabet soup and place it in the basket",
+            "num_frames": 146
+          },
+          {
+            "task": "pick up the chocolate pudding and place it in the basket",
+            "num_frames": 149
+          }
+        ]
+      },
+      {
+        "suite": "goal",
+        "dataset": "libero_goal_no_noops",
+        "num_episodes": 10,
+        "num_frames": 1208,
+        "episodes": [
+          {
+            "task": "push the plate to the front of the stove",
+            "num_frames": 138
+          },
+          {
+            "task": "put the wine bottle on top of the cabinet",
+            "num_frames": 116
+          },
+          {
+            "task": "put the wine bottle on the rack",
+            "num_frames": 156
+          },
+          {
+            "task": "put the bowl on top of the cabinet",
+            "num_frames": 91
+          },
+          {
+            "task": "open the top drawer and put the bowl inside",
+            "num_frames": 184
+          },
+          {
+            "task": "put the bowl on the stove",
+            "num_frames": 98
+          },
+          {
+            "task": "put the cream cheese in the bowl",
+            "num_frames": 96
+          },
+          {
+            "task": "turn on the stove",
+            "num_frames": 90
+          },
+          {
+            "task": "open the middle drawer of the cabinet",
+            "num_frames": 142
+          },
+          {
+            "task": "put the bowl on the plate",
+            "num_frames": 97
+          }
+        ]
+      },
+      {
+        "suite": "long",
+        "dataset": "libero_10_no_noops",
+        "num_episodes": 30,
+        "num_frames": 7965,
+        "episodes": [
+          {
+            "task": "put the yellow and white mug in the microwave and close it",
+            "num_frames": 345
+          },
+          {
+            "task": "put the black bowl in the bottom drawer of the cabinet and close it",
+            "num_frames": 242
+          },
+          {
+            "task": "put both the cream cheese box and the butter in the basket",
+            "num_frames": 249
+          },
+          {
+            "task": "put both the alphabet soup and the tomato sauce in the basket",
+            "num_frames": 296
+          },
+          {
+            "task": "pick up the book and place it in the back compartment of the caddy",
+            "num_frames": 195
+          },
+          {
+            "task": "put both the cream cheese box and the butter in the basket",
+            "num_frames": 242
+          },
+          {
+            "task": "put both the alphabet soup and the cream cheese box in the basket",
+            "num_frames": 248
+          },
+          {
+            "task": "put both moka pots on the stove",
+            "num_frames": 388
+          },
+          {
+            "task": "put both moka pots on the stove",
+            "num_frames": 416
+          },
+          {
+            "task": "put both the alphabet soup and the tomato sauce in the basket",
+            "num_frames": 312
+          },
+          {
+            "task": "put both the alphabet soup and the cream cheese box in the basket",
+            "num_frames": 290
+          },
+          {
+            "task": "pick up the book and place it in the back compartment of the caddy",
+            "num_frames": 184
+          },
+          {
+            "task": "put both the cream cheese box and the butter in the basket",
+            "num_frames": 262
+          },
+          {
+            "task": "put the yellow and white mug in the microwave and close it",
+            "num_frames": 293
+          },
+          {
+            "task": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+            "num_frames": 250
+          },
+          {
+            "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+            "num_frames": 220
+          },
+          {
+            "task": "put both the alphabet soup and the cream cheese box in the basket",
+            "num_frames": 289
+          },
+          {
+            "task": "put the black bowl in the bottom drawer of the cabinet and close it",
+            "num_frames": 267
+          },
+          {
+            "task": "put the yellow and white mug in the microwave and close it",
+            "num_frames": 260
+          },
+          {
+            "task": "turn on the stove and put the moka pot on it",
+            "num_frames": 239
+          },
+          {
+            "task": "turn on the stove and put the moka pot on it",
+            "num_frames": 245
+          },
+          {
+            "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+            "num_frames": 215
+          },
+          {
+            "task": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+            "num_frames": 232
+          },
+          {
+            "task": "turn on the stove and put the moka pot on it",
+            "num_frames": 228
+          },
+          {
+            "task": "put both moka pots on the stove",
+            "num_frames": 341
+          },
+          {
+            "task": "put both the alphabet soup and the tomato sauce in the basket",
+            "num_frames": 276
+          },
+          {
+            "task": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+            "num_frames": 242
+          },
+          {
+            "task": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+            "num_frames": 275
+          },
+          {
+            "task": "put the black bowl in the bottom drawer of the cabinet and close it",
+            "num_frames": 251
+          },
+          {
+            "task": "pick up the book and place it in the back compartment of the caddy",
+            "num_frames": 173
+          }
+        ]
+      }
+    ],
+    "image_mode": "native",
+    "action_tail_padding": "repeat_last_as_in_official_exporter",
+    "sample_kind": "official_stratified_60_episodes_with_native_images",
+    "source_exporter": "/workspace/actquant/src/ActQuant/tools/fisher-diag/get_pi05_calib_data.py",
+    "source_exporter_sha256": "79695cf78d298b9c00afaadb59f77c732d2ffa05cd8036502f4ec2784d24e400",
+    "episode_selections": [
+      {
+        "suite": "spatial",
+        "selected_episode_indices": [
+          2,
+          23,
+          46,
+          87,
+          93,
+          114,
+          121,
+          142,
+          393,
+          430
+        ],
+        "tasks": {
+          "pick up the black bowl between the plate and the ramekin and place it on the plate": [
+            393
+          ],
+          "pick up the black bowl from table center and place it on the plate": [
+            87
+          ],
+          "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate": [
+            2
+          ],
+          "pick up the black bowl next to the cookie box and place it on the plate": [
+            121
+          ],
+          "pick up the black bowl next to the plate and place it on the plate": [
+            142
+          ],
+          "pick up the black bowl next to the ramekin and place it on the plate": [
+            114
+          ],
+          "pick up the black bowl on the cookie box and place it on the plate": [
+            93
+          ],
+          "pick up the black bowl on the ramekin and place it on the plate": [
+            23
+          ],
+          "pick up the black bowl on the stove and place it on the plate": [
+            430
+          ],
+          "pick up the black bowl on the wooden cabinet and place it on the plate": [
+            46
+          ]
+        }
+      },
+      {
+        "suite": "object",
+        "selected_episode_indices": [
+          20,
+          51,
+          63,
+          84,
+          140,
+          156,
+          189,
+          402,
+          426,
+          430
+        ],
+        "tasks": {
+          "pick up the alphabet soup and place it in the basket": [
+            426
+          ],
+          "pick up the bbq sauce and place it in the basket": [
+            51
+          ],
+          "pick up the butter and place it in the basket": [
+            20
+          ],
+          "pick up the chocolate pudding and place it in the basket": [
+            430
+          ],
+          "pick up the cream cheese and place it in the basket": [
+            189
+          ],
+          "pick up the ketchup and place it in the basket": [
+            156
+          ],
+          "pick up the milk and place it in the basket": [
+            140
+          ],
+          "pick up the orange juice and place it in the basket": [
+            63
+          ],
+          "pick up the salad dressing and place it in the basket": [
+            84
+          ],
+          "pick up the tomato sauce and place it in the basket": [
+            402
+          ]
+        }
+      },
+      {
+        "suite": "goal",
+        "selected_episode_indices": [
+          32,
+          36,
+          81,
+          122,
+          129,
+          181,
+          187,
+          384,
+          413,
+          424
+        ],
+        "tasks": {
+          "open the middle drawer of the cabinet": [
+            413
+          ],
+          "open the top drawer and put the bowl inside": [
+            129
+          ],
+          "push the plate to the front of the stove": [
+            32
+          ],
+          "put the bowl on the plate": [
+            424
+          ],
+          "put the bowl on the stove": [
+            181
+          ],
+          "put the bowl on top of the cabinet": [
+            122
+          ],
+          "put the cream cheese in the bowl": [
+            187
+          ],
+          "put the wine bottle on the rack": [
+            81
+          ],
+          "put the wine bottle on top of the cabinet": [
+            36
+          ],
+          "turn on the stove": [
+            384
+          ]
+        }
+      },
+      {
+        "suite": "long",
+        "selected_episode_indices": [
+          2,
+          15,
+          17,
+          26,
+          28,
+          53,
+          63,
+          67,
+          70,
+          71,
+          82,
+          103,
+          116,
+          126,
+          129,
+          138,
+          148,
+          155,
+          178,
+          184,
+          218,
+          242,
+          252,
+          259,
+          288,
+          336,
+          343,
+          346,
+          371,
+          374
+        ],
+        "tasks": {
+          "pick up the book and place it in the back compartment of the caddy": [
+            28,
+            103,
+            374
+          ],
+          "put both moka pots on the stove": [
+            67,
+            70,
+            288
+          ],
+          "put both the alphabet soup and the cream cheese box in the basket": [
+            63,
+            82,
+            148
+          ],
+          "put both the alphabet soup and the tomato sauce in the basket": [
+            26,
+            71,
+            336
+          ],
+          "put both the cream cheese box and the butter in the basket": [
+            17,
+            53,
+            116
+          ],
+          "put the black bowl in the bottom drawer of the cabinet and close it": [
+            15,
+            155,
+            371
+          ],
+          "put the white mug on the left plate and put the yellow and white mug on the right plate": [
+            129,
+            343,
+            346
+          ],
+          "put the white mug on the plate and put the chocolate pudding to the right of the plate": [
+            138,
+            242,
+            252
+          ],
+          "put the yellow and white mug in the microwave and close it": [
+            2,
+            126,
+            178
+          ],
+          "turn on the stove and put the moka pot on it": [
+            184,
+            218,
+            259
+          ]
+        }
+      }
+    ],
+    "sparse_placeholder_camera": true,
+    "adaptation": "Only bypass PIL224 resize; model performs official resize; optional sparse zero camera preserves all values"
+  },
+  "seed": 42,
+  "checkpoint": "/workspace/actquant/models/pi05_libero",
+  "calib_dir": "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+  "source_sha256": {
+    "/workspace/actquant/src/ActQuant/tools/fisher-diag/compute_fisher_pi05.py": "2bffc920bc88ccb3cad18ab8c053e1b54e09826502d8311ba42e0219154d07d5",
+    "/workspace/actquant/src/ActQuant/tools/hsic/compute_hsic_pi05.py": "8116af0d0d8baa28a9d5611a8b95597b650be7c263ce6455f0a495f2a5ec9320"
+  },
+  "runner_sha256": "bc8e56dd08109da888bdc4a6f7b33540bdb6c0d89945914a94800cf26f856108",
+  "strict_load": "PASS",
+  "tied_aliases": [
+    [
+      "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight",
+      "paligemma_with_expert.paligemma.lm_head.weight"
+    ]
+  ],
+  "runtime_precision": {
+    "float32_matmul_precision": "highest",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+    "NVIDIA_TF32_OVERRIDE": null
+  },
+  "completed_samples": 210,
+  "duration_seconds": 895.6144274100079,
+  "checkpoint_samples": 200
+}

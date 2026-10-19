@@ -1,0 +1,24 @@
+{
+  "scope": "accumulation_only_at_actual288_target_shapes; no model forward",
+  "default_cpu_threads": 56,
+  "matrices": 288,
+  "elements": 2392879104,
+  "cases": {
+    "cpu_accum_threads_56": {
+      "seconds": 4.562619151023682,
+      "square_and_d2h_seconds": 4.230121620872524,
+      "cpu_add_seconds": 0.33221713436068967
+    },
+    "cpu_accum_threads_4": {
+      "seconds": 4.490633415989578,
+      "square_and_d2h_seconds": 3.9745772883761674,
+      "cpu_add_seconds": 0.5158495259238407
+    },
+    "gpu_accum": {
+      "seconds": 0.08523210999555886
+    }
+  },
+  "bitwise_equal_all288": true,
+  "status": "PASS",
+  "peak_gpu_gib": 13.627689361572266
+}

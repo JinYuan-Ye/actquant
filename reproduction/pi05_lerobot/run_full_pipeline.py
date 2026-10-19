@@ -34,6 +34,7 @@ def main():
     parser.add_argument("--calib-dir", type=Path, required=True)
     parser.add_argument("--data-dir", type=Path, default=ROOT / "data/libero_probe_rlds")
     parser.add_argument("--wait-for-download", action="store_true", help="Wait for the separately tracked downloader")
+    parser.add_argument("--fisher-execution", choices=("cpu", "gpu"), default="cpu", help="Validated equivalent accumulator storage backend")
     args = parser.parse_args()
     run_dir = args.run_dir.resolve()
     args.calib_dir = args.calib_dir.resolve()
@@ -119,7 +120,8 @@ def main():
         save()
         # Budget for two recovery snapshots (atomic replacement), both Fisher exports,
         # and the standalone/full quantized outputs. These do not coexist at peak.
-        required = 24*1024**3
+        existing_snapshot = run_dir / "fisher/fisher-resume.pt"
+        required = max(0, 24*1024**3 - (existing_snapshot.stat().st_size if existing_snapshot.exists() else 0))
         if shutil.disk_usage(run_dir).free < required:
             raise ValueError("Need at least 24 GiB free after data export for safe Fisher checkpoints and quantization")
         hsic_dir, fisher_dir = run_dir / "hsic", run_dir / "fisher"
@@ -140,7 +142,8 @@ def main():
                                 "format_counts": dict(Counter(assigned["assignments"].values()))}
         save()
         resume_args = ["--resume"] if (fisher_dir / "fisher-resume.pt").exists() else []
-        stage("fisher", py("run_calibration.py", "--stage", "fisher", *common, "--output", fisher_dir,
+        fisher_script = "run_fisher_gpu.py" if args.fisher_execution == "gpu" else "run_calibration.py"
+        stage("fisher", py(fisher_script, "--stage", "fisher", *common, "--output", fisher_dir,
                            "--checkpoint-every", "200", *resume_args), resume=bool(resume_args))
         stage("fisher_audit", py("audit_full_calibration.py", "--calib-dir", args.calib_dir,
                                  "--fisher-dir", fisher_dir, "--output", run_dir / "fisher-audit.json"))

@@ -28,7 +28,7 @@
 
 ## 保持不变的方法
 
-LeRobot checkpoint、官方输入约定、horizon50、B=1、完整32维均值loss、FP32 matmul highest、关闭额外图像增强与教学版一致。HSIC复用上游全帧GPU实现（hidden RBF、Y linear、lx=ly=1、默认带宽估计），126目标使用F_out分配；预算2.3471，候选IQ2_XS至Q4_K。Fisher复用原逐样本梯度平方累积和GGUF writer，不更改数学公式或量化内核。所有126项显式传入分配格式，并验证per-weight Fisher被读取。
+LeRobot checkpoint、官方输入约定、horizon50、B=1、完整32维均值loss、FP32 matmul highest、关闭额外图像增强与教学版一致。HSIC复用上游全帧GPU实现（hidden RBF、Y linear、lx=ly=1、默认带宽估计），126目标使用F_out分配；预算2.3471，候选IQ2_XS至Q4_K。Fisher保留原逐样本梯度平方统计和GGUF writer，外部GPU执行器仅改变累积器存放位置，已在真实模型全部288项验证逐元素一致，见 [FISHER_PERFORMANCE.md](FISHER_PERFORMANCE.md)。不更改数学公式或量化内核。所有126项显式传入分配格式，并验证per-weight Fisher被读取。
 
 本轮仍量化126个LLM目标；视觉、embedding、action expert等保持基础精度。计算并保存视觉Fisher不等于本轮对视觉全量低位量化。
 
@@ -49,10 +49,10 @@ source deployment/activate_server.sh
 python -u reproduction/pi05_lerobot/run_full_pipeline.py \
   --run-dir reproduction/results/pi05-full-01 \
   --calib-dir reproduction/data/pi05-full-60ep-01 \
-  --wait-for-download
+  --fisher-execution gpu
 ```
 
-激活命令选择隔离的OpenPI环境、离线模型加载和GGUF/C++库路径。流水线命令指定全新的正式规模结果和数据目录；`--wait-for-download`等待本轮已独立启动的受跟踪下载，随后自动导出、审计、HSIC、分配、Fisher、量化、合并与单观测十步配对采样。Fisher传入的数据总帧数来自审计，不是4或其他上限。该入口已经启动，不应并行再启动第二份；文件锁也会拒绝同一任务并发。
+激活命令选择隔离的OpenPI环境、离线模型加载和GGUF/C++库路径。流水线命令指定正式规模结果和数据目录，随后自动导出、审计、HSIC、分配、Fisher、量化、合并与单观测十步配对采样。最初CPU路径用--wait-for-download启动；下载完成后，该参数不再需要。现用--fisher-execution gpu从原200帧快照精确续算，跳过已完成阶段。Fisher传入的数据总帧数来自审计，不是4或其他上限。该入口已经启动，不应并行再启动第二份；文件锁也会拒绝同一任务并发。
 
 ## 仍需独立验证
 

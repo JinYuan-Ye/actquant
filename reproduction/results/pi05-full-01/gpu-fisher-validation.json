@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "matrices": 288,
+  "samples": [
+    {
+      "index": 0,
+      "loss_original": 0.06935328245162964,
+      "loss_gpu": 0.06935328245162964,
+      "loss_exact": true,
+      "all288_accumulators_exact": true,
+      "original_step_seconds": 4.5769489299855195,
+      "gpu_step_seconds": 0.22399792703799903
+    },
+    {
+      "index": 1216,
+      "loss_original": 0.058861274272203445,
+      "loss_gpu": 0.058861274272203445,
+      "loss_exact": true,
+      "all288_accumulators_exact": true,
+      "original_step_seconds": 4.175225301005412,
+      "gpu_step_seconds": 0.2189722820185125
+    }
+  ],
+  "gpu_execution_sha256": "8acdffb19fa20f9bb2ca6e91a7b619bdee6d209374ca4c95d0b99a0f89971954",
+  "snapshot_and_export": "PASS",
+  "peak_gpu_gib": 20.71541166305542
+}

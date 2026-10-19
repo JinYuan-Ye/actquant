@@ -4,7 +4,7 @@
 
 ## 发布门槛和进度
 
-发布程序等待 `reproduction/results/pi05-full-01/pipeline.json` 为PASS，且每个阶段均PASS。检查校准覆盖为60轨迹11,777帧、完整Fisher/量化产物审计、单观测配对执行状态以及模型SHA256。计算失败时停止发布，保留错误。
+用户后续要求先上传脚本，代码与说明已先行推送main，状态见 `exports/code-publication-01.json`。模型发布程序仍等待 `reproduction/results/pi05-full-01/pipeline.json` 为PASS，且每个阶段均PASS。检查校准覆盖为60轨迹11,777帧、完整Fisher/量化产物审计、单观测配对执行状态以及模型SHA256。计算失败时停止模型发布，保留错误。
 
 当前发布状态位于 `exports/github-publication-full-01.json`。WAITING_FOR_FULL_QUANTIZATION仅表示等待，不代表上传完成；只有PUBLISHED加远端commit和release_url才表示实际上传并核验完成。
 

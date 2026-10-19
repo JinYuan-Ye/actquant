@@ -564,8 +564,15 @@
     "cudnn_allow_tf32": true,
     "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
     "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
-    "NVIDIA_TF32_OVERRIDE": null
+    "NVIDIA_TF32_OVERRIDE": null,
+    "fisher_execution": "equivalent_gpu_accumulators",
+    "gpu_execution_sha256": "8acdffb19fa20f9bb2ca6e91a7b619bdee6d209374ca4c95d0b99a0f89971954",
+    "validation": "/workspace/actquant/reproduction/results/pi05-full-01/gpu-fisher-validation.json",
+    "cpu_threads": 8,
+    "per_sample_empty_cache": false
   },
-  "completed_samples": 150,
-  "duration_seconds": 643.2808309959946
+  "resumed_samples": 200,
+  "completed_samples": 560,
+  "duration_seconds": 141.85402854299173,
+  "checkpoint_samples": 400
 }

@@ -1,0 +1,16 @@
+{
+  "status": "GPU_RESUMED",
+  "checkpoint_samples": 200,
+  "old_observed_samples": 210,
+  "old_pipeline_pid": 39092,
+  "old_fisher_pid": 41120,
+  "old_publication_pid": 40920,
+  "reason": "real-model bitwise-equivalent GPU accumulators; eliminate per-sample gradient D2H traffic",
+  "validation": "gpu-fisher-validation.json",
+  "snapshot_bytes": 9571718983,
+  "resumed_samples": 200,
+  "observed_gpu_samples": 560,
+  "real_model_validation": "all288 accumulators and losses exact for two samples",
+  "replayed_printed_losses_201_to_219": "EXACT_MATCH",
+  "recovered_preflight_issue": "Resume disk guard now accounts for the already allocated snapshot"
+}

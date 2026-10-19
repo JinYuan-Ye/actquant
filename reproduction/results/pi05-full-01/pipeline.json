@@ -84,7 +84,7 @@
       "command": [
         "/workspace/actquant/envs/openpi-server/bin/python",
         "-u",
-        "/workspace/actquant/reproduction/pi05_lerobot/run_calibration.py",
+        "/workspace/actquant/reproduction/pi05_lerobot/run_fisher_gpu.py",
         "--stage",
         "fisher",
         "--calib-dir",
@@ -94,17 +94,39 @@
         "--output",
         "/workspace/actquant/reproduction/results/pi05-full-01/fisher",
         "--checkpoint-every",
-        "200"
+        "200",
+        "--resume"
       ],
-      "started_utc": "2026-10-19T15:27:09Z",
-      "pid": 41120,
-      "seconds": 650.0967944710283
+      "started_utc": "2026-10-19T15:43:16Z",
+      "previous_attempt": {
+        "status": "RUNNING",
+        "command": [
+          "/workspace/actquant/envs/openpi-server/bin/python",
+          "-u",
+          "/workspace/actquant/reproduction/pi05_lerobot/run_calibration.py",
+          "--stage",
+          "fisher",
+          "--calib-dir",
+          "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
+          "--num-samples",
+          "11777",
+          "--output",
+          "/workspace/actquant/reproduction/results/pi05-full-01/fisher",
+          "--checkpoint-every",
+          "200"
+        ],
+        "started_utc": "2026-10-19T15:27:09Z",
+        "pid": 41120,
+        "seconds": 930.1299577500322
+      },
+      "pid": 42911,
+      "seconds": 140.02388393500587
     }
   },
   "scope": "60 episodes, every selected frame; all126 LLM targets",
   "seed": 42,
-  "pid": 39092,
-  "runner_sha256": "1cabbaf5f78e9982366d0557144b36e669f7fd21a8d060a11c4c71fec9ef99c2",
+  "pid": 42843,
+  "runner_sha256": "1d754fc7f8dc286f92afdc0ecc4139f6b05fbe0fa0806c55aead7e20e17a5f82",
   "authorized_scope": "User explicitly requested full calibration-set quantization",
   "calib_dir": "/workspace/actquant/reproduction/data/pi05-full-60ep-01",
   "phase": "fisher",
@@ -148,5 +170,6 @@
       "IQ3_XXS": 5,
       "IQ4_XS": 1
     }
-  }
+  },
+  "error": "ValueError('Need at least 24 GiB free after data export for safe Fisher checkpoints and quantization')"
 }
