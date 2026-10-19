@@ -3,12 +3,14 @@
 import argparse
 import fcntl
 import hashlib
+import http.client
 import json
 import os
 from pathlib import Path
 import shutil
 import subprocess
 import time
+from urllib.parse import urlencode
 
 from prepare_github_publication import ROOT, REPO, TAG, PINS, prepare
 
@@ -36,6 +38,27 @@ def gh(*arguments):
 
 def api(endpoint):
     return json.loads(gh("api", endpoint))
+
+
+def upload_asset(release_id, path):
+    # Drafts may not have a Git tag yet; address the authenticated REST release ID.
+    # Retrieve the CLI-managed credential only in memory; never log/store its value.
+    token = gh("auth", "token").strip()
+    connection = http.client.HTTPSConnection("uploads.github.com", timeout=600, blocksize=8*1024**2)
+    endpoint = f"/repos/{REPO}/releases/{release_id}/assets?"+urlencode({"name": path.name})
+    try:
+        with path.open("rb") as stream:
+            connection.request("POST", endpoint, body=stream,
+                               headers={"Authorization": "Bearer "+token, "Accept": "application/vnd.github+json",
+                                        "User-Agent": "actquant-model-publication", "Content-Type": "application/octet-stream",
+                                        "Content-Length": str(path.stat().st_size)})
+            response = connection.getresponse()
+            payload = response.read()
+        if response.status != 201:
+            raise RuntimeError(f"Asset upload HTTP {response.status}: {payload.decode(errors='replace')[:500]}")
+        return json.loads(payload)
+    finally:
+        connection.close()
 
 
 def split_model(model, assets, expected):
@@ -203,16 +226,23 @@ Model source: https://huggingface.co/lerobot/pi05_libero_finetuned_v044/tree/715
             else:
                 if not release["draft"]:
                     raise ValueError("Refusing to change an already published incomplete Release")
-                gh("release", "upload", TAG, path, "--repo", REPO)
-            current = api(f"repos/{REPO}/releases/{release['id']}")
-            uploaded = next(a for a in current["assets"] if a["name"] == name)
+                upload_asset(release["id"], path)
+            uploaded = None
+            for attempt in range(10):
+                current = api(f"repos/{REPO}/releases/{release['id']}")
+                uploaded = next((a for a in current["assets"] if a["name"] == name), None)
+                if uploaded is not None and uploaded.get("digest"):
+                    break
+                time.sleep(1)
+            if uploaded is None:
+                raise ValueError(f"Uploaded asset is not visible yet: {name}")
             if uploaded["state"] != "uploaded" or uploaded["size"] != path.stat().st_size or uploaded.get("digest") != expected_hash:
                 raise ValueError(f"Uploaded asset hash/size mismatch: {name}")
             state["uploads_verified"].append(name)
             save()
             print("Uploaded and verified:", name, flush=True)
         if release["draft"]:
-            gh("release", "edit", TAG, "--repo", REPO, "--draft=false")
+            gh("api", "--method", "PATCH", f"repos/{REPO}/releases/{release['id']}", "-F", "draft=false")
         published = api(f"repos/{REPO}/releases/{release['id']}")
         branch = api(f"repos/{REPO}/git/ref/heads/main")
         if published["draft"] or branch["object"]["sha"] != commit:
